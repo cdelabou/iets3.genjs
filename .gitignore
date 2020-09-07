@@ -3,3 +3,15 @@ source_gen
 source_gen.caches
 classes_gen
 classes_gen.caches
+
+# IETS3
+dependencies/iets3.opensource
+
+# Ignore Gradle project-specific cache directory
+.gradle
+
+# Ignore Gradle build output directory
+build
+
+# External libraries (optional)
+.mps/libraries.xml

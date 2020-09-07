@@ -5,7 +5,7 @@
     <devkit ref="a2eb3a43-fcc2-4200-80dc-c60110c4862d(jetbrains.mps.devkit.templates)" />
   </languages>
   <imports>
-    <import index="fiyb" ref="r:0e861a50-e515-4869-b942-e21c7c2eb296(org.iets3.core.expr.base.genjs.structure)" />
+    <import index="fiyb" ref="r:0e861a50-e515-4869-b942-e21c7c2eb296(org.iets3.core.expr.genjs.base.structure)" />
   </imports>
   <registry>
     <language id="b401a680-8325-4110-8fd3-84331ff25bef" name="jetbrains.mps.lang.generator">

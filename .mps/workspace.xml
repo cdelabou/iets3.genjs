@@ -2,77 +2,25 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="228b5950-685d-4629-9f9d-141b75e51a23" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.mps/migration.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.mps/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.mps/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/languages/org.iets3.core.expr.base.genjs/classes_gen/org/iets3/core/expr/base/genjs/Language.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/languages/org.iets3.core.expr.base.genjs/classes_gen/org/iets3/core/expr/base/genjs/behavior/trace.info" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/languages/org.iets3.core.expr.base.genjs/classes_gen/org/iets3/core/expr/base/genjs/constraints/ConstraintsAspectDescriptor.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/languages/org.iets3.core.expr.base.genjs/classes_gen/org/iets3/core/expr/base/genjs/constraints/aspectcps-descriptorclasses.mps" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/languages/org.iets3.core.expr.base.genjs/classes_gen/org/iets3/core/expr/base/genjs/constraints/checkpoints" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/languages/org.iets3.core.expr.base.genjs/classes_gen/org/iets3/core/expr/base/genjs/constraints/trace.info" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/languages/org.iets3.core.expr.base.genjs/classes_gen/org/iets3/core/expr/base/genjs/editor/trace.info" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/languages/org.iets3.core.expr.base.genjs/classes_gen/org/iets3/core/expr/base/genjs/structure/ConceptPresentationAspectImpl.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/languages/org.iets3.core.expr.base.genjs/classes_gen/org/iets3/core/expr/base/genjs/structure/LanguageConceptSwitch.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/languages/org.iets3.core.expr.base.genjs/classes_gen/org/iets3/core/expr/base/genjs/structure/StructureAspectDescriptor.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/languages/org.iets3.core.expr.base.genjs/classes_gen/org/iets3/core/expr/base/genjs/structure/aspectcps-descriptorclasses.mps" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/languages/org.iets3.core.expr.base.genjs/classes_gen/org/iets3/core/expr/base/genjs/structure/checkpoints" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/languages/org.iets3.core.expr.base.genjs/classes_gen/org/iets3/core/expr/base/genjs/structure/trace.info" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/languages/org.iets3.core.expr.base.genjs/classes_gen/org/iets3/core/expr/base/genjs/trace.info" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/languages/org.iets3.core.expr.base.genjs/classes_gen/org/iets3/core/expr/base/genjs/typesystem/TypesystemDescriptor.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/languages/org.iets3.core.expr.base.genjs/classes_gen/org/iets3/core/expr/base/genjs/typesystem/aspectcps-descriptorclasses.mps" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/languages/org.iets3.core.expr.base.genjs/classes_gen/org/iets3/core/expr/base/genjs/typesystem/checkpoints" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/languages/org.iets3.core.expr.base.genjs/classes_gen/org/iets3/core/expr/base/genjs/typesystem/trace.info" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/languages/org.iets3.core.expr.base.genjs/generator/classes_gen/NewLanguage/Generator.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/languages/org.iets3.core.expr.base.genjs/generator/classes_gen/NewLanguage/trace.info" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/languages/org.iets3.core.expr.base.genjs/generator/classes_gen/main/QueriesGenerated.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/languages/org.iets3.core.expr.base.genjs/generator/classes_gen/main/trace.info" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/languages/org.iets3.core.expr.base.genjs/generator/source_gen.caches/NewLanguage/dependencies" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/languages/org.iets3.core.expr.base.genjs/generator/source_gen.caches/NewLanguage/generated" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/languages/org.iets3.core.expr.base.genjs/generator/source_gen.caches/main/dependencies" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/languages/org.iets3.core.expr.base.genjs/generator/source_gen.caches/main/generated" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/languages/org.iets3.core.expr.base.genjs/generator/source_gen/NewLanguage/Generator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/languages/org.iets3.core.expr.base.genjs/generator/source_gen/NewLanguage/trace.info" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/languages/org.iets3.core.expr.base.genjs/generator/source_gen/main/QueriesGenerated.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/languages/org.iets3.core.expr.base.genjs/generator/source_gen/main/trace.info" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/languages/org.iets3.core.expr.base.genjs/generator/templates/main@generator.mps" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/languages/org.iets3.core.expr.base.genjs/models/org.iets3.core.expr.base.genjs.behavior.mps" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/languages/org.iets3.core.expr.base.genjs/models/org.iets3.core.expr.base.genjs.constraints.mps" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/languages/org.iets3.core.expr.base.genjs/models/org.iets3.core.expr.base.genjs.editor.mps" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/languages/org.iets3.core.expr.base.genjs/models/org.iets3.core.expr.base.genjs.structure.mps" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/languages/org.iets3.core.expr.base.genjs/models/org.iets3.core.expr.base.genjs.typesystem.mps" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/languages/org.iets3.core.expr.base.genjs/org.iets3.core.expr.base.genjs.mpl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/languages/org.iets3.core.expr.base.genjs/source_gen.caches/org/iets3/core/expr/base/genjs/behavior/dependencies" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/languages/org.iets3.core.expr.base.genjs/source_gen.caches/org/iets3/core/expr/base/genjs/behavior/generated" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/languages/org.iets3.core.expr.base.genjs/source_gen.caches/org/iets3/core/expr/base/genjs/constraints/dependencies" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/languages/org.iets3.core.expr.base.genjs/source_gen.caches/org/iets3/core/expr/base/genjs/constraints/generated" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/languages/org.iets3.core.expr.base.genjs/source_gen.caches/org/iets3/core/expr/base/genjs/dependencies" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/languages/org.iets3.core.expr.base.genjs/source_gen.caches/org/iets3/core/expr/base/genjs/editor/dependencies" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/languages/org.iets3.core.expr.base.genjs/source_gen.caches/org/iets3/core/expr/base/genjs/editor/generated" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/languages/org.iets3.core.expr.base.genjs/source_gen.caches/org/iets3/core/expr/base/genjs/generated" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/languages/org.iets3.core.expr.base.genjs/source_gen.caches/org/iets3/core/expr/base/genjs/structure/dependencies" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/languages/org.iets3.core.expr.base.genjs/source_gen.caches/org/iets3/core/expr/base/genjs/structure/generated" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/languages/org.iets3.core.expr.base.genjs/source_gen.caches/org/iets3/core/expr/base/genjs/typesystem/dependencies" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/languages/org.iets3.core.expr.base.genjs/source_gen.caches/org/iets3/core/expr/base/genjs/typesystem/generated" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/languages/org.iets3.core.expr.base.genjs/source_gen/org/iets3/core/expr/base/genjs/Language.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/languages/org.iets3.core.expr.base.genjs/source_gen/org/iets3/core/expr/base/genjs/behavior/trace.info" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/languages/org.iets3.core.expr.base.genjs/source_gen/org/iets3/core/expr/base/genjs/constraints/ConstraintsAspectDescriptor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/languages/org.iets3.core.expr.base.genjs/source_gen/org/iets3/core/expr/base/genjs/constraints/aspectcps-descriptorclasses.mps" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/languages/org.iets3.core.expr.base.genjs/source_gen/org/iets3/core/expr/base/genjs/constraints/checkpoints" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/languages/org.iets3.core.expr.base.genjs/source_gen/org/iets3/core/expr/base/genjs/constraints/trace.info" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/languages/org.iets3.core.expr.base.genjs/source_gen/org/iets3/core/expr/base/genjs/editor/trace.info" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/languages/org.iets3.core.expr.base.genjs/source_gen/org/iets3/core/expr/base/genjs/structure/ConceptPresentationAspectImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/languages/org.iets3.core.expr.base.genjs/source_gen/org/iets3/core/expr/base/genjs/structure/LanguageConceptSwitch.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/languages/org.iets3.core.expr.base.genjs/source_gen/org/iets3/core/expr/base/genjs/structure/StructureAspectDescriptor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/languages/org.iets3.core.expr.base.genjs/source_gen/org/iets3/core/expr/base/genjs/structure/aspectcps-descriptorclasses.mps" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/languages/org.iets3.core.expr.base.genjs/source_gen/org/iets3/core/expr/base/genjs/structure/checkpoints" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/languages/org.iets3.core.expr.base.genjs/source_gen/org/iets3/core/expr/base/genjs/structure/trace.info" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/languages/org.iets3.core.expr.base.genjs/source_gen/org/iets3/core/expr/base/genjs/trace.info" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/languages/org.iets3.core.expr.base.genjs/source_gen/org/iets3/core/expr/base/genjs/typesystem/TypesystemDescriptor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/languages/org.iets3.core.expr.base.genjs/source_gen/org/iets3/core/expr/base/genjs/typesystem/aspectcps-descriptorclasses.mps" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/languages/org.iets3.core.expr.base.genjs/source_gen/org/iets3/core/expr/base/genjs/typesystem/checkpoints" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/languages/org.iets3.core.expr.base.genjs/source_gen/org/iets3/core/expr/base/genjs/typesystem/trace.info" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gitattributes" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.mps/libraries.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dependencies/.libraries.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gradlew" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gradlew.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/settings.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.mps/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.mps/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.mps/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.mps/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/languages/org.iets3.core.expr.base.genjs/generator/templates/main@generator.mps" beforeDir="false" afterPath="$PROJECT_DIR$/languages/org.iets3.core.expr.genjs.base/generator/templates/main@generator.mps" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/languages/org.iets3.core.expr.base.genjs/models/org.iets3.core.expr.base.genjs.behavior.mps" beforeDir="false" afterPath="$PROJECT_DIR$/languages/org.iets3.core.expr.genjs.base/models/org.iets3.core.expr.genjs.base.behavior.mps" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/languages/org.iets3.core.expr.base.genjs/models/org.iets3.core.expr.base.genjs.constraints.mps" beforeDir="false" afterPath="$PROJECT_DIR$/languages/org.iets3.core.expr.genjs.base/models/org.iets3.core.expr.genjs.base.constraints.mps" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/languages/org.iets3.core.expr.base.genjs/models/org.iets3.core.expr.base.genjs.editor.mps" beforeDir="false" afterPath="$PROJECT_DIR$/languages/org.iets3.core.expr.genjs.base/models/org.iets3.core.expr.genjs.base.editor.mps" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/languages/org.iets3.core.expr.base.genjs/models/org.iets3.core.expr.base.genjs.structure.mps" beforeDir="false" afterPath="$PROJECT_DIR$/languages/org.iets3.core.expr.genjs.base/models/org.iets3.core.expr.genjs.base.structure.mps" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/languages/org.iets3.core.expr.base.genjs/models/org.iets3.core.expr.base.genjs.typesystem.mps" beforeDir="false" afterPath="$PROJECT_DIR$/languages/org.iets3.core.expr.genjs.base/models/org.iets3.core.expr.genjs.base.typesystem.mps" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/languages/org.iets3.core.expr.base.genjs/org.iets3.core.expr.base.genjs.mpl" beforeDir="false" afterPath="$PROJECT_DIR$/languages/org.iets3.core.expr.genjs.base/org.iets3.core.expr.genjs.base.mpl" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -93,7 +41,7 @@
         <TabState>
           <option name="title" value="Console" />
           <tab>
-            <model ref="4379767a-6b9a-41c1-b9a9-9845a705cdbb/r:6fb33b1a-cd58-44dd-b5c9-8039bab95063(TempModule4379767a-6b9a-41c1-b9a9-9845a705cdbb/ConsoleModel_174500524473900)">
+            <model ref="1306a470-8285-4552-bddd-e683bca4ce80/r:39de18f0-ea6d-42f3-8415-bddd456ef38c(TempModule1306a470-8285-4552-bddd-e683bca4ce80/ConsoleModel_176508007580500)">
               <persistence version="9" />
               <languages>
                 <devkit ref="70d3d6da-af63-483d-a75f-9c8acf8de332(jetbrains.mps.console.devkit)" />
@@ -113,11 +61,11 @@
                   <concept id="757553790980850366" name="jetbrains.mps.console.base.structure.History" flags="ng" index="3balQm" />
                 </language>
               </registry>
-              <node concept="aymSD" id="2pelqkUKz_">
-                <node concept="3balQm" id="2pelqkUKzA" role="aymYE" />
-                <node concept="2Clz$F" id="2pelqkUKzB" role="aymYO" />
-                <node concept="2_V_lH" id="2pelqkUKzC" role="1PhJh3">
-                  <ref role="2_V_lI" node="2pelqkUKzB" resolve="CommandHolder" />
+              <node concept="aymSD" id="7R_FW37Ba8y">
+                <node concept="3balQm" id="7R_FW37Ba8z" role="aymYE" />
+                <node concept="2Clz$F" id="7R_FW37Ba8$" role="aymYO" />
+                <node concept="2_V_lH" id="7R_FW37Ba8_" role="1PhJh3">
+                  <ref role="2_V_lI" node="7R_FW37Ba8$" resolve="CommandHolder" />
                 </node>
               </node>
             </model>
@@ -420,10 +368,189 @@
   <component name="ProjectView">
     <navigator currentView="FileSystem" proportions="" version="1" />
     <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Modules Pool" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Languages" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="org" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="iets3" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="core" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="expr" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="genjava" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Modules Pool" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Languages" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="org" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Modules Pool" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Languages" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="org" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="iets3" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="core" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Modules Pool" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Languages" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Modules Pool" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Languages" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="org" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="iets3" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Project" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Modules Pool" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Languages" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="org" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="iets3" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="core" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="expr" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="genjava" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="30254c5b-f87e-4bb3-a60a-77a7ec6ed411(org.iets3.core.expr.genjava.base)" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Modules Pool" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Languages" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="org" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="iets3" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="core" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="expr" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Modules Pool" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
       <pane id="FileSystem">
         <subPane>
           <expand>
             <path>
+              <item name="" type="" />
+            </path>
+            <path>
+              <item name="" type="" />
+              <item name="" type="" />
+            </path>
+            <path>
+              <item name="" type="" />
+              <item name="" type="" />
               <item name="" type="" />
             </path>
           </expand>
@@ -433,69 +560,20 @@
       <pane id="CustomProjectView_org.iets3.core.plugin.plugin.SpecExplorer">
         <subPane />
       </pane>
+      <pane id="CustomProjectView_org.iets3.core.expr.doc.plugin.plugin.BookmarkExplorer">
+        <subPane />
+      </pane>
       <pane id="CustomProjectView_com.mbeddr.mpsutil.favourites.plugin.plugin.FavouritesProjectView">
         <subPane />
       </pane>
       <pane id="CustomProjectView_org.iets3.core.expr.doc.plugin.plugin.BookmarkExplorer">
         <subPane />
       </pane>
-      <pane id="ProjectPane">
-        <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Project" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="acbc5fbb-8801-4f62-a053-ab017db885db(org.iets3.core.expr.base.genjs)" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="org.iets3.core.expr.base.genjs#01" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Project" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="acbc5fbb-8801-4f62-a053-ab017db885db(org.iets3.core.expr.base.genjs)" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Project" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Project" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="acbc5fbb-8801-4f62-a053-ab017db885db(org.iets3.core.expr.base.genjs)" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="org.iets3.core.expr.base.genjs#01" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="r:84e376cf-977e-4541-9e3a-5109bb070bbc(main@generator) in IdeaFile[path: C:/Users/clebo/MPSProjects/iets3.opensource.genjs/languages/org.iets3.core.expr.base.genjs/generator/templates/main@generator.mps]" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-          <SELECTED>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Project" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </SELECTED>
-        </subPane>
+      <pane id="CustomProjectView_com.mbeddr.mpsutil.favourites.plugin.plugin.FavouritesProjectView">
+        <subPane />
+      </pane>
+      <pane id="CustomProjectView_org.iets3.core.plugin.plugin.SpecExplorer">
+        <subPane />
       </pane>
     </panes>
   </component>
@@ -506,6 +584,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="com.mbeddr.mpsutil.multilingual.concept.runtime.plugin.MultilingualConceptProjectPlugin_ProjectPluginPart.showTranslations" value="false" />
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -532,5 +611,13 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="599" y="212" key="#MPSPropertiesConfigurable/0.0.1920.1040@0.0.1920.1040" timestamp="1599475316199" />
+    <state x="552" y="160" key="#Plugins" timestamp="1599475663832">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="552" y="160" key="#Plugins/0.0.1920.1040@0.0.1920.1040" timestamp="1599475663832" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1599475652676">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1599475652676" />
   </component>
 </project>

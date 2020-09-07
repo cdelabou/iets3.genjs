@@ -2,7 +2,7 @@
 <project version="4">
   <component name="MPSProject">
     <projectModules>
-      <modulePath path="$PROJECT_DIR$/languages/org.iets3.core.expr.base.genjs/org.iets3.core.expr.base.genjs.mpl" folder="" />
+      <modulePath path="$PROJECT_DIR$/languages/org.iets3.core.expr.genjs.base/org.iets3.core.expr.genjs.base.mpl" folder="" />
     </projectModules>
   </component>
 </project>

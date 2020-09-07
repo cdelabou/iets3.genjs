@@ -1,0 +1,20 @@
+rootProject.name = 'iets3.opensource.genjs'
+
+buildscript {
+    repositories {
+        jcenter()
+    }
+    dependencies {
+        classpath 'com.alexvasilkov:gradle-git-dependencies:2.0.1'
+    }
+}
+apply plugin: 'com.alexvasilkov.git-dependencies'
+
+git {
+    fetch 'https://github.com/IETS3/iets3.opensource', {
+        dir "$rootDir/dependencies/iets3.opensource"
+        name "iets3.opensource"
+    }
+}
+
+includeBuild "./dependencies/iets3.opensource"

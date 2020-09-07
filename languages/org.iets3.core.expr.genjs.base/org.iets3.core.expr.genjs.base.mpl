@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<language namespace="org.iets3.core.expr.base.genjs" uuid="acbc5fbb-8801-4f62-a053-ab017db885db" languageVersion="0" moduleVersion="0">
+<language namespace="org.iets3.core.expr.genjs.base" uuid="acbc5fbb-8801-4f62-a053-ab017db885db" languageVersion="0" moduleVersion="0">
   <models>
     <modelRoot contentPath="${module}" type="default">
       <sourceRoot location="models" />
@@ -12,7 +12,7 @@
   </facets>
   <accessoryModels />
   <generators>
-    <generator alias="main" namespace="org.iets3.core.expr.base.genjs#01" uuid="4166eb0f-595e-4b4f-9c9b-ac5141ea2ae7">
+    <generator alias="main" namespace="org.iets3.core.expr.genjs.base#01" uuid="4166eb0f-595e-4b4f-9c9b-ac5141ea2ae7">
       <models>
         <modelRoot contentPath="${module}/generator" type="default">
           <sourceRoot location="templates" />
@@ -49,8 +49,8 @@
         <module reference="8865b7a8-5271-43d3-884c-6fd1d9cfdd34(MPS.OpenAPI)" version="0" />
         <module reference="ceab5195-25ea-4f22-9b92-103b95ca8c0c(jetbrains.mps.lang.core)" version="0" />
         <module reference="9e98f4e2-decf-4e97-bf80-9109e8b759aa(jetbrains.mps.lang.feedback.context)" version="0" />
-        <module reference="acbc5fbb-8801-4f62-a053-ab017db885db(org.iets3.core.expr.base.genjs)" version="0" />
-        <module reference="4166eb0f-595e-4b4f-9c9b-ac5141ea2ae7(org.iets3.core.expr.base.genjs#01)" version="0" />
+        <module reference="acbc5fbb-8801-4f62-a053-ab017db885db(org.iets3.core.expr.genjs.base)" version="0" />
+        <module reference="4166eb0f-595e-4b4f-9c9b-ac5141ea2ae7(org.iets3.core.expr.genjs.base#01)" version="0" />
       </dependencyVersions>
       <mapping-priorities />
     </generator>
@@ -98,7 +98,7 @@
     <module reference="ceab5195-25ea-4f22-9b92-103b95ca8c0c(jetbrains.mps.lang.core)" version="0" />
     <module reference="a9e4c532-c5f5-4bb7-99ef-42abb73bbb70(jetbrains.mps.lang.descriptor.aspects)" version="0" />
     <module reference="9e98f4e2-decf-4e97-bf80-9109e8b759aa(jetbrains.mps.lang.feedback.context)" version="0" />
-    <module reference="acbc5fbb-8801-4f62-a053-ab017db885db(org.iets3.core.expr.base.genjs)" version="0" />
+    <module reference="acbc5fbb-8801-4f62-a053-ab017db885db(org.iets3.core.expr.genjs.base)" version="0" />
   </dependencyVersions>
   <extendedLanguages />
 </language>
