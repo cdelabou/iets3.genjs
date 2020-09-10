@@ -3,6 +3,8 @@
   <component name="MPSProject">
     <projectModules>
       <modulePath path="$PROJECT_DIR$/languages/org.iets3.core.expr.genjs.base/org.iets3.core.expr.genjs.base.mpl" folder="" />
+      <modulePath path="$PROJECT_DIR$/languages/org.mar9000.mps.ecmascript.modules/org.mar9000.mps.ecmascript.modules.mpl" folder="" />
+      <modulePath path="$PROJECT_DIR$/solutions/org.iets3.core.expr.genjs.base.rt/org.iets3.core.expr.genjs.base.rt.msd" folder="" />
     </projectModules>
   </component>
 </project>

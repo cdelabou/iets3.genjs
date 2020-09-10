@@ -13,5 +13,7 @@ dependencies/iets3.opensource
 # Ignore Gradle build output directory
 build
 
+.mps/workspace.xml
+
 # External libraries (optional)
 .mps/libraries.xml
