@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dev-kit name="org.iets3.core.expr.genjs.core.devkit" uuid="a205582f-4182-4cf8-b061-99a91555b8b9">
+  <exported-language name="acbc5fbb-8801-4f62-a053-ab017db885db(org.iets3.core.expr.genjs.base)" />
+  <exported-language name="f2122111-2e69-4f81-8e65-120416de80e8(org.iets3.core.expr.genjs.simpleTypes)" />
+  <exported-language name="f0534572-e0f4-46cd-8abb-ed67e4c4a375(org.iets3.core.expr.genjs.toplevel)" />
+  <exported-solutions>
+    <exported-solution>cb743fb5-230f-4298-84e4-59b7101f05e8(org.iets3.core.expr.genjs.core.genplan)</exported-solution>
+  </exported-solutions>
+  <generation-plan model="r:2fc4f890-c8fb-44bb-8454-5b8eeb9e248f(org.iets3.core.expr.genjs.core.genplan.genplan)" />
+</dev-kit>
+
