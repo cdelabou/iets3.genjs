@@ -143,5 +143,54 @@
     <property role="3GE5qa" value="operations" />
     <ref role="1TJDcQ" to="rh3e:7rFtnRVFc7H" resolve="JSForInStatement" />
   </node>
+  <node concept="1TIwiD" id="3wZrk5qfQL6">
+    <property role="EcuMT" value="4053078317111143494" />
+    <property role="3GE5qa" value="expr.template" />
+    <property role="TrG5h" value="JSTemplateLiteral" />
+    <property role="34LRSv" value="${}" />
+    <ref role="1TJDcQ" to="rh3e:bcrrPfidFD" resolve="JSLiteral" />
+    <node concept="1TJgyj" id="3wZrk5qfSF$" role="1TKVEi">
+      <property role="IQ2ns" value="4053078317111151332" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="content" />
+      <property role="20lbJX" value="fLJekj5/_0__n" />
+      <ref role="20lvS9" node="3wZrk5qfQL8" resolve="ILiteralTemplateContent" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="3wZrk5qfQL7">
+    <property role="EcuMT" value="4053078317111143495" />
+    <property role="3GE5qa" value="expr.template" />
+    <property role="TrG5h" value="TemplateLiteralWord" />
+    <property role="34LRSv" value="&lt;&gt;" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
+    <node concept="1TJgyi" id="3wZrk5qfQL9" role="1TKVEl">
+      <property role="IQ2nx" value="4053078317111143497" />
+      <property role="TrG5h" value="value" />
+      <ref role="AX2Wp" to="tpck:fKAOsGN" resolve="string" />
+    </node>
+    <node concept="PrWs8" id="3wZrk5qfQLb" role="PzmwI">
+      <ref role="PrY4T" node="3wZrk5qfQL8" resolve="ILiteralTemplateContent" />
+    </node>
+  </node>
+  <node concept="PlHQZ" id="3wZrk5qfQL8">
+    <property role="EcuMT" value="4053078317111143496" />
+    <property role="3GE5qa" value="expr.template" />
+    <property role="TrG5h" value="ILiteralTemplateContent" />
+  </node>
+  <node concept="1TIwiD" id="3wZrk5qfSET">
+    <property role="EcuMT" value="4053078317111151289" />
+    <property role="3GE5qa" value="expr.template" />
+    <property role="TrG5h" value="TemplateLiteralValue" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
+    <node concept="PrWs8" id="3wZrk5qfSEU" role="PzmwI">
+      <ref role="PrY4T" node="3wZrk5qfQL8" resolve="ILiteralTemplateContent" />
+    </node>
+    <node concept="1TJgyj" id="3wZrk5qfSEW" role="1TKVEi">
+      <property role="IQ2ns" value="4053078317111151292" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="content" />
+      <ref role="20lvS9" to="rh3e:7rFtnRVF22p" resolve="JSExpression" />
+    </node>
+  </node>
 </model>
 

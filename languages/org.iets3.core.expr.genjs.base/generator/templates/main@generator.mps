@@ -416,6 +416,7 @@
     </language>
     <language id="ceab5195-25ea-4f22-9b92-103b95ca8c0c" name="jetbrains.mps.lang.core">
       <concept id="1133920641626" name="jetbrains.mps.lang.core.structure.BaseConcept" flags="ng" index="2VYdi">
+        <property id="1193676396447" name="virtualPackage" index="3GE5qa" />
         <child id="5169995583184591170" name="smodelAttribute" index="lGtFl" />
       </concept>
       <concept id="3364660638048049750" name="jetbrains.mps.lang.core.structure.PropertyAttribute" flags="ng" index="A9Btg">
@@ -463,8 +464,9 @@
     </language>
   </registry>
   <node concept="jVnub" id="3sNJH54VHkc">
-    <property role="TrG5h" value="DefaultValueExpression" />
-    <ref role="phYkn" node="7bZFIimgIJh" resolve="Expression2Expression" />
+    <property role="TrG5h" value="DefaultValue2JSExpression" />
+    <property role="3GE5qa" value="expression" />
+    <ref role="phYkn" node="7bZFIimgIJh" resolve="Expression2JSExpression" />
     <node concept="gft3U" id="3sNJH54WgbM" role="jxRDz">
       <node concept="Xl_RD" id="3sNJH54WgbN" role="gfFT$">
         <property role="Xl_RC" value="ERROR" />
@@ -1126,7 +1128,8 @@
     </node>
   </node>
   <node concept="jVnub" id="7bZFIimgIJh">
-    <property role="TrG5h" value="Expression2Expression" />
+    <property role="TrG5h" value="Expression2JSExpression" />
+    <property role="3GE5qa" value="expression" />
     <node concept="3aamgX" id="6IxV2nSbW0R" role="3aUrZf">
       <property role="36QftV" value="true" />
       <ref role="30HIoZ" to="hm2y:4rZeNQ6OJ4v" resolve="ParensExpression" />
@@ -1725,13 +1728,13 @@
                           </node>
                         </node>
                         <node concept="1sPUBX" id="V59VW8q32H" role="lGtFl">
-                          <ref role="v9R2y" node="68MLomycj7I" resolve="Expression2ReturnStatement" />
+                          <ref role="v9R2y" node="68MLomycj7I" resolve="Expression2JSReturnStatement" />
                         </node>
                       </node>
                     </node>
                   </node>
                   <node concept="1sPUBX" id="V59VW8q32K" role="lGtFl">
-                    <ref role="v9R2y" node="68MLomyagFy" resolve="Expression2SideEffectStatement" />
+                    <ref role="v9R2y" node="68MLomyagFy" resolve="Expression2SideEffectJSStatement" />
                   </node>
                 </node>
               </node>
@@ -7047,7 +7050,7 @@
       <node concept="gft3U" id="64nSO$MwVXZ" role="1lVwrX">
         <node concept="2dxDzr" id="7zmmAnrW$Yq" role="gfFT$">
           <node concept="1sPUBX" id="7zmmAnrW_di" role="lGtFl">
-            <ref role="v9R2y" node="7zmmAnrUkjN" resolve="AlternativesExpressionToExpression" />
+            <ref role="v9R2y" node="7zmmAnrUkjN" resolve="AlternativesExpressionToJSExpression" />
             <node concept="3cmrfG" id="7zmmAnrW_dk" role="v9R3O">
               <property role="3cmrfH" value="-1" />
             </node>
@@ -7931,7 +7934,7 @@
             <property role="3cmrfH" value="2" />
           </node>
           <node concept="1sPUBX" id="3sNJH54VZ2h" role="lGtFl">
-            <ref role="v9R2y" node="3sNJH54VHkc" resolve="DefaultValueExpression" />
+            <ref role="v9R2y" node="3sNJH54VHkc" resolve="DefaultValue2JSExpression" />
           </node>
         </node>
       </node>
@@ -8496,7 +8499,7 @@
     </node>
   </node>
   <node concept="jVnub" id="68MLomycj7I">
-    <property role="TrG5h" value="Expression2ReturnStatement" />
+    <property role="TrG5h" value="Expression2JSReturnStatement" />
     <node concept="3aamgX" id="68MLomycxEm" role="3aUrZf">
       <property role="36QftV" value="true" />
       <ref role="30HIoZ" to="hm2y:6sdnDbSla17" resolve="Expression" />
@@ -8506,7 +8509,7 @@
             <node concept="2dhBVA" id="64nSO$Mxa8K" role="1dxaaB">
               <property role="2dhB_1" value="0" />
               <node concept="1sPUBX" id="64nSO$Mxa8N" role="lGtFl">
-                <ref role="v9R2y" node="7bZFIimgIJh" resolve="Expression2Expression" />
+                <ref role="v9R2y" node="7bZFIimgIJh" resolve="Expression2JSExpression" />
               </node>
             </node>
           </node>
@@ -8529,7 +8532,7 @@
             </node>
             <node concept="raruj" id="64nSO$Mxaz0" role="lGtFl" />
             <node concept="1sPUBX" id="64nSO$Mxaz2" role="lGtFl">
-              <ref role="v9R2y" node="68MLomyagFy" resolve="Expression2SideEffectStatement" />
+              <ref role="v9R2y" node="68MLomyagFy" resolve="Expression2SideEffectJSStatement" />
             </node>
           </node>
           <node concept="1dSozb" id="64nSO$Mxazd" role="1dSoGN">
@@ -8579,7 +8582,7 @@
             </node>
             <node concept="raruj" id="64nSO$MxbZr" role="lGtFl" />
             <node concept="1sPUBX" id="64nSO$MxbZs" role="lGtFl">
-              <ref role="v9R2y" node="68MLomyagFy" resolve="Expression2SideEffectStatement" />
+              <ref role="v9R2y" node="68MLomyagFy" resolve="Expression2SideEffectJSStatement" />
             </node>
           </node>
           <node concept="1dSozb" id="64nSO$MxbZt" role="1dSoGN">
@@ -8681,13 +8684,13 @@
                     </node>
                   </node>
                   <node concept="1sPUBX" id="64nSO$Mxesl" role="lGtFl">
-                    <ref role="v9R2y" node="68MLomycj7I" resolve="Expression2ReturnStatement" />
+                    <ref role="v9R2y" node="68MLomycj7I" resolve="Expression2JSReturnStatement" />
                   </node>
                 </node>
               </node>
             </node>
             <node concept="1sPUBX" id="64nSO$Mxesm" role="lGtFl">
-              <ref role="v9R2y" node="68MLomyagFy" resolve="Expression2SideEffectStatement" />
+              <ref role="v9R2y" node="68MLomyagFy" resolve="Expression2SideEffectJSStatement" />
             </node>
           </node>
         </node>
@@ -8695,7 +8698,7 @@
     </node>
   </node>
   <node concept="jVnub" id="68MLomyagFy">
-    <property role="TrG5h" value="Expression2SideEffectStatement" />
+    <property role="TrG5h" value="Expression2SideEffectJSStatement" />
     <node concept="3aamgX" id="68MLomyagLj" role="3aUrZf">
       <property role="36QftV" value="true" />
       <ref role="30HIoZ" to="hm2y:6sdnDbSla17" resolve="Expression" />
@@ -8704,7 +8707,7 @@
           <node concept="2dhBVA" id="64nSO$Mxosb" role="1dwvF7">
             <property role="2dhB_1" value="2" />
             <node concept="1sPUBX" id="64nSO$Mxozq" role="lGtFl">
-              <ref role="v9R2y" node="7bZFIimgIJh" resolve="Expression2Expression" />
+              <ref role="v9R2y" node="7bZFIimgIJh" resolve="Expression2JSExpression" />
             </node>
           </node>
         </node>
@@ -9070,7 +9073,7 @@
               </node>
             </node>
             <node concept="1sPUBX" id="7zmmAnrTRbo" role="lGtFl">
-              <ref role="v9R2y" node="68MLomyagFy" resolve="Expression2SideEffectStatement" />
+              <ref role="v9R2y" node="68MLomyagFy" resolve="Expression2SideEffectJSStatement" />
             </node>
           </node>
         </node>
@@ -9141,7 +9144,7 @@
           <node concept="1dSo_L" id="7zmmAnrVlKa" role="1dwHBd">
             <node concept="2dxDFB" id="7zmmAnrVlK9" role="1dwvF7" />
             <node concept="1sPUBX" id="7zmmAnrVm14" role="lGtFl">
-              <ref role="v9R2y" node="68MLomyagFy" resolve="Expression2SideEffectStatement" />
+              <ref role="v9R2y" node="68MLomyagFy" resolve="Expression2SideEffectJSStatement" />
               <node concept="3NFfHV" id="7zmmAnrVoHE" role="1sPUBK">
                 <node concept="3clFbS" id="7zmmAnrVoHF" role="2VODD2">
                   <node concept="3clFbF" id="7zmmAnrVoJC" role="3cqZAp">
@@ -9178,7 +9181,7 @@
               </node>
             </node>
             <node concept="1sPUBX" id="7zmmAnrVm4z" role="lGtFl">
-              <ref role="v9R2y" node="68MLomyagFy" resolve="Expression2SideEffectStatement" />
+              <ref role="v9R2y" node="68MLomyagFy" resolve="Expression2SideEffectJSStatement" />
               <node concept="3NFfHV" id="7zmmAnrVpRE" role="1sPUBK">
                 <node concept="3clFbS" id="7zmmAnrVpRF" role="2VODD2">
                   <node concept="3clFbF" id="7zmmAnrVpTC" role="3cqZAp">
@@ -9366,7 +9369,7 @@
             <property role="2dhB_1" value="2" />
           </node>
           <node concept="1sPUBX" id="7zmmAnrXsTa" role="lGtFl">
-            <ref role="v9R2y" node="7bZFIimgIJh" resolve="Expression2Expression" />
+            <ref role="v9R2y" node="7bZFIimgIJh" resolve="Expression2JSExpression" />
           </node>
         </node>
       </node>
@@ -10126,7 +10129,8 @@
     </node>
   </node>
   <node concept="jVnub" id="7zmmAnrUkjN">
-    <property role="TrG5h" value="AlternativesExpressionToExpression" />
+    <property role="TrG5h" value="AlternativesExpressionToJSExpression" />
+    <property role="3GE5qa" value="expression" />
     <node concept="3aamgX" id="7zmmAnrVcof" role="3aUrZf">
       <property role="36QftV" value="true" />
       <ref role="30HIoZ" to="hm2y:6UxFDrx4dp4" resolve="AlternativesExpression" />
@@ -10142,7 +10146,7 @@
                     </node>
                   </node>
                   <node concept="1sPUBX" id="7zmmAnrVgPA" role="lGtFl">
-                    <ref role="v9R2y" node="7zmmAnrUkjN" resolve="AlternativesExpressionToExpression" />
+                    <ref role="v9R2y" node="7zmmAnrUkjN" resolve="AlternativesExpressionToJSExpression" />
                     <node concept="3cmrfG" id="7zmmAnrVgPL" role="v9R3O">
                       <property role="3cmrfH" value="0" />
                     </node>
@@ -10220,7 +10224,7 @@
                   </node>
                 </node>
                 <node concept="1sPUBX" id="7zmmAnrUkNF" role="lGtFl">
-                  <ref role="v9R2y" node="68MLomycj7I" resolve="Expression2ReturnStatement" />
+                  <ref role="v9R2y" node="68MLomycj7I" resolve="Expression2JSReturnStatement" />
                   <node concept="3NFfHV" id="7zmmAnrUkNG" role="1sPUBK">
                     <node concept="3clFbS" id="7zmmAnrUkNH" role="2VODD2">
                       <node concept="3clFbF" id="7zmmAnrUkNI" role="3cqZAp">
@@ -10282,7 +10286,7 @@
                 </node>
               </node>
               <node concept="1sPUBX" id="7zmmAnrUN1r" role="lGtFl">
-                <ref role="v9R2y" node="7zmmAnrUkjN" resolve="AlternativesExpressionToExpression" />
+                <ref role="v9R2y" node="7zmmAnrUkjN" resolve="AlternativesExpressionToJSExpression" />
                 <node concept="3cpWs3" id="7zmmAnrUNUg" role="v9R3O">
                   <node concept="3cmrfG" id="7zmmAnrUNUj" role="3uHU7w">
                     <property role="3cmrfH" value="1" />
@@ -10317,7 +10321,8 @@
     </node>
   </node>
   <node concept="jVnub" id="3QewYwH$jFJ">
-    <property role="TrG5h" value="CollectionDotExpressionToExpression" />
+    <property role="TrG5h" value="CollectionDotExpressionToJSExpression" />
+    <property role="3GE5qa" value="expression" />
     <node concept="3aamgX" id="3QewYwH$m9J" role="3aUrZf">
       <property role="36QftV" value="true" />
       <ref role="30HIoZ" to="hm2y:7NJy08a3O99" resolve="DotExpression" />
