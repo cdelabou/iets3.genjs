@@ -13,32 +13,7 @@
     <use id="ad93155d-79b2-4759-b10c-55123e763903" name="jetbrains.mps.lang.messages" version="0" />
     <devkit ref="00000000-0000-4000-0000-5604ebd4f22c(jetbrains.mps.devkit.aspect.constraints)" />
   </languages>
-  <imports>
-    <import index="otu7" ref="r:bf0fde45-cd5e-4dd1-a718-906a1253d7f1(org.mar9000.mps.ecmascript.modules.structure)" implicit="true" />
-  </imports>
-  <registry>
-    <language id="3f4bc5f5-c6c1-4a28-8b10-c83066ffa4a1" name="jetbrains.mps.lang.constraints">
-      <concept id="8401916545537438642" name="jetbrains.mps.lang.constraints.structure.InheritedNodeScopeFactory" flags="ng" index="1dDu$B">
-        <reference id="8401916545537438643" name="kind" index="1dDu$A" />
-      </concept>
-      <concept id="1213093968558" name="jetbrains.mps.lang.constraints.structure.ConceptConstraints" flags="ng" index="1M2fIO">
-        <reference id="1213093996982" name="concept" index="1M2myG" />
-        <child id="1213100494875" name="referent" index="1Mr941" />
-      </concept>
-      <concept id="1148687176410" name="jetbrains.mps.lang.constraints.structure.NodeReferentConstraint" flags="ng" index="1N5Pfh">
-        <reference id="1148687202698" name="applicableLink" index="1N5Vy1" />
-        <child id="1148687345559" name="searchScopeFactory" index="1N6uqs" />
-      </concept>
-    </language>
-  </registry>
-  <node concept="1M2fIO" id="h7N6XeBnsJ">
-    <ref role="1M2myG" to="otu7:h7N6XeyysY" resolve="JSUnitImport" />
-    <node concept="1N5Pfh" id="h7N6XeBnyw" role="1Mr941">
-      <ref role="1N5Vy1" to="otu7:h7N6XeBnsG" resolve="imported" />
-      <node concept="1dDu$B" id="6nL1QEfGrHV" role="1N6uqs">
-        <ref role="1dDu$A" to="otu7:h7N6Xe_VmQ" resolve="JSExportStatement" />
-      </node>
-    </node>
-  </node>
+  <imports />
+  <registry />
 </model>
 

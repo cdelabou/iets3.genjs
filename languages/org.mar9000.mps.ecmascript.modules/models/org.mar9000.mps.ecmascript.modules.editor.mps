@@ -10,7 +10,6 @@
     <import index="rh3e" ref="r:33c6cc84-4a64-455a-8222-df658e689ef1(org.mar9000.mps.ecmascript.structure)" />
     <import index="3aej" ref="r:747ff8d1-828a-41db-8304-ef0626966e67(org.mar9000.mps.ecmascript.editor)" />
     <import index="otu7" ref="r:bf0fde45-cd5e-4dd1-a718-906a1253d7f1(org.mar9000.mps.ecmascript.modules.structure)" implicit="true" />
-    <import index="tpck" ref="r:00000000-0000-4000-0000-011c89590288(jetbrains.mps.lang.core.structure)" implicit="true" />
   </imports>
   <registry>
     <language id="18bc6592-03a6-4e29-a83a-7ff23bde13ba" name="jetbrains.mps.lang.editor">
@@ -21,7 +20,6 @@
       <concept id="2000375450116423800" name="jetbrains.mps.lang.editor.structure.SubstituteMenu" flags="ng" index="22mcaB" />
       <concept id="1071666914219" name="jetbrains.mps.lang.editor.structure.ConceptEditorDeclaration" flags="ig" index="24kQdi" />
       <concept id="1140524381322" name="jetbrains.mps.lang.editor.structure.CellModel_ListWithRole" flags="ng" index="2czfm3">
-        <property id="1140524450557" name="separatorText" index="2czwfO" />
         <child id="1140524464360" name="cellLayout" index="2czzBx" />
       </concept>
       <concept id="1237303669825" name="jetbrains.mps.lang.editor.structure.CellLayout_Indent" flags="nn" index="l2Vlx" />
@@ -37,7 +35,6 @@
         <property id="1186414551515" name="flag" index="VOm3f" />
         <child id="1223387335081" name="query" index="3n$kyP" />
       </concept>
-      <concept id="1186414928363" name="jetbrains.mps.lang.editor.structure.SelectableStyleSheetItem" flags="ln" index="VPM3Z" />
       <concept id="1630016958697344083" name="jetbrains.mps.lang.editor.structure.IMenu_Concept" flags="ng" index="2ZABuq">
         <reference id="6591946374543067572" name="conceptDeclaration" index="aqKnT" />
         <child id="5991739802479788259" name="type" index="22hAXT" />
@@ -45,16 +42,11 @@
       <concept id="7342352913006985483" name="jetbrains.mps.lang.editor.structure.SubstituteMenuPart_Action" flags="ng" index="3eGOop">
         <child id="8612453216082699922" name="substituteHandler" index="3aKz83" />
       </concept>
-      <concept id="1088013125922" name="jetbrains.mps.lang.editor.structure.CellModel_RefCell" flags="sg" stub="730538219795941030" index="1iCGBv">
-        <child id="1088186146602" name="editorComponent" index="1sWHZn" />
-      </concept>
       <concept id="1381004262292414836" name="jetbrains.mps.lang.editor.structure.ICellStyle" flags="ng" index="1k5N5V">
         <reference id="1381004262292426837" name="parentStyleClass" index="1k5W1q" />
       </concept>
       <concept id="1223387125302" name="jetbrains.mps.lang.editor.structure.QueryFunction_Boolean" flags="in" index="3nzxsE" />
-      <concept id="1088185857835" name="jetbrains.mps.lang.editor.structure.InlineEditorComponent" flags="ig" index="1sVBvm" />
       <concept id="1139848536355" name="jetbrains.mps.lang.editor.structure.CellModel_WithRole" flags="ng" index="1$h60E">
-        <property id="1140017977771" name="readOnly" index="1Intyy" />
         <reference id="1140103550593" name="relationDeclaration" index="1NtTu8" />
       </concept>
       <concept id="1073389446423" name="jetbrains.mps.lang.editor.structure.CellModel_Collection" flags="sn" stub="3013115976261988961" index="3EZMnI">
@@ -131,94 +123,6 @@
       </concept>
     </language>
   </registry>
-  <node concept="24kQdi" id="h7N6Xeyz9h">
-    <ref role="1XX52x" to="otu7:h7N6Xeu1g7" resolve="JSImportStatement" />
-    <node concept="3EZMnI" id="h7N6Xeyzf3" role="2wV5jI">
-      <node concept="3F0ifn" id="h7N6Xeyzf9" role="3EZMnx">
-        <property role="3F0ifm" value="import" />
-      </node>
-      <node concept="3F2HdR" id="h7N6Xeyzff" role="3EZMnx">
-        <property role="2czwfO" value=", " />
-        <ref role="1NtTu8" to="otu7:h7N6XeyysX" resolve="targets" />
-        <node concept="l2Vlx" id="h7N6Xeyzfh" role="2czzBx" />
-      </node>
-      <node concept="3EZMnI" id="h7N6Xeyzfw" role="3EZMnx">
-        <node concept="VPM3Z" id="h7N6Xeyzfy" role="3F10Kt" />
-        <node concept="3F0ifn" id="h7N6Xeyzf$" role="3EZMnx">
-          <property role="3F0ifm" value="as" />
-        </node>
-        <node concept="3F0A7n" id="h7N6XeyzfL" role="3EZMnx">
-          <ref role="1NtTu8" to="otu7:h7N6XeyysV" resolve="asName" />
-        </node>
-        <node concept="l2Vlx" id="h7N6Xeyzf_" role="2iSdaV" />
-      </node>
-      <node concept="3F0ifn" id="h7N6Xeyzg5" role="3EZMnx">
-        <property role="3F0ifm" value="from" />
-      </node>
-      <node concept="1iCGBv" id="h7N6Xeyzgr" role="3EZMnx">
-        <ref role="1NtTu8" to="otu7:h7N6XeyyIk" resolve="sourceModule" />
-        <node concept="1sVBvm" id="h7N6Xeyzgt" role="1sWHZn">
-          <node concept="3F0A7n" id="h7N6XeyzgH" role="2wV5jI">
-            <property role="1Intyy" value="true" />
-            <ref role="1NtTu8" to="tpck:h0TrG11" resolve="name" />
-          </node>
-        </node>
-      </node>
-      <node concept="l2Vlx" id="h7N6Xeyzf5" role="2iSdaV" />
-    </node>
-  </node>
-  <node concept="24kQdi" id="h7N6Xe$YE_">
-    <ref role="1XX52x" to="otu7:h7N6XeyyyJ" resolve="JSImportAll" />
-    <node concept="3F0ifn" id="h7N6Xe$YKn" role="2wV5jI">
-      <property role="3F0ifm" value="*" />
-    </node>
-  </node>
-  <node concept="24kQdi" id="h7N6XeA6R9">
-    <ref role="1XX52x" to="otu7:h7N6Xe_VmQ" resolve="JSExportStatement" />
-    <node concept="3EZMnI" id="h7N6XeA6WV" role="2wV5jI">
-      <node concept="3F0ifn" id="h7N6XeA6X1" role="3EZMnx">
-        <property role="3F0ifm" value="export" />
-      </node>
-      <node concept="3F0A7n" id="h7N6XeA6X7" role="3EZMnx">
-        <ref role="1NtTu8" to="otu7:h7N6XeA6R1" resolve="name" />
-      </node>
-      <node concept="3F0ifn" id="h7N6XeA6Xk" role="3EZMnx">
-        <property role="3F0ifm" value="=" />
-      </node>
-      <node concept="3F1sOY" id="h7N6XeA6XA" role="3EZMnx">
-        <ref role="1NtTu8" to="otu7:h7N6XeA6R0" resolve="content" />
-      </node>
-      <node concept="l2Vlx" id="h7N6XeA6WX" role="2iSdaV" />
-    </node>
-  </node>
-  <node concept="24kQdi" id="h7N6XeCM4j">
-    <ref role="1XX52x" to="otu7:h7N6XeyysY" resolve="JSUnitImport" />
-    <node concept="3EZMnI" id="h7N6XeCMa5" role="2wV5jI">
-      <node concept="1iCGBv" id="h7N6XeCMab" role="3EZMnx">
-        <ref role="1NtTu8" to="otu7:h7N6XeBnsG" resolve="imported" />
-        <node concept="1sVBvm" id="h7N6XeCMad" role="1sWHZn">
-          <node concept="3F0A7n" id="h7N6XeCMak" role="2wV5jI">
-            <property role="1Intyy" value="true" />
-            <ref role="1NtTu8" to="otu7:h7N6XeA6R1" resolve="name" />
-          </node>
-        </node>
-      </node>
-      <node concept="l2Vlx" id="h7N6XeCMa7" role="2iSdaV" />
-    </node>
-  </node>
-  <node concept="24kQdi" id="64nSO$M3t_c">
-    <property role="3GE5qa" value="operations" />
-    <ref role="1XX52x" to="otu7:64nSO$M3tvp" resolve="SpreadOpExpression" />
-    <node concept="3EZMnI" id="64nSO$M3tEY" role="2wV5jI">
-      <node concept="3F0ifn" id="64nSO$M3tF4" role="3EZMnx">
-        <property role="3F0ifm" value="..." />
-      </node>
-      <node concept="3F1sOY" id="64nSO$M3tFa" role="3EZMnx">
-        <ref role="1NtTu8" to="otu7:64nSO$M3t_a" resolve="target" />
-      </node>
-      <node concept="l2Vlx" id="64nSO$M3tF0" role="2iSdaV" />
-    </node>
-  </node>
   <node concept="24kQdi" id="64nSO$MfTSG">
     <property role="3GE5qa" value="operations" />
     <ref role="1XX52x" to="otu7:64nSO$MfTiC" resolve="ForOfStatement" />

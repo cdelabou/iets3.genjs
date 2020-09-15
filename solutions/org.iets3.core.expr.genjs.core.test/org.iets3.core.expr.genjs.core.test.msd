@@ -6,11 +6,14 @@
     </modelRoot>
   </models>
   <facets>
-    <facet type="java">
+    <facet type="java" languageLevel="JAVA_8">
       <classes generated="true" path="${module}/classes_gen" />
     </facet>
   </facets>
   <sourcePath />
+  <dependencies>
+    <dependency reexport="false">a205582f-4182-4cf8-b061-99a91555b8b9(org.iets3.core.expr.genjs.core.devkit)</dependency>
+  </dependencies>
   <languageVersions>
     <language slang="l:d4280a54-f6df-4383-aa41-d1b2bffa7eb1:com.mbeddr.core.base" version="5" />
     <language slang="l:63e0e566-5131-447e-90e3-12ea330e1a00:com.mbeddr.mpsutil.blutil" version="1" />
@@ -32,6 +35,9 @@
     <language slang="l:7b68d745-a7b8-48b9-bd9c-05c0f8725a35:org.iets3.core.base" version="0" />
     <language slang="l:cfaa4966-b7d5-4b69-b66a-309a6e1a7290:org.iets3.core.expr.base" version="3" />
     <language slang="l:2f7e2e35-6e74-4c43-9fa5-2465d68f5996:org.iets3.core.expr.collections" version="5" />
+    <language slang="l:acbc5fbb-8801-4f62-a053-ab017db885db:org.iets3.core.expr.genjs.base" version="0" />
+    <language slang="l:f2122111-2e69-4f81-8e65-120416de80e8:org.iets3.core.expr.genjs.simpleTypes" version="0" />
+    <language slang="l:f0534572-e0f4-46cd-8abb-ed67e4c4a375:org.iets3.core.expr.genjs.toplevel" version="0" />
     <language slang="l:9464fa06-5ab9-409b-9274-64ab29588457:org.iets3.core.expr.lambda" version="1" />
     <language slang="l:f3eafff0-30d2-46d6-9150-f0f3b880ce27:org.iets3.core.expr.path" version="0" />
     <language slang="l:18001c94-33a7-4f68-a7c1-ffddc4b39be1:org.iets3.core.expr.repl" version="0" />
@@ -48,6 +54,8 @@
     <module reference="726886d1-ef90-4249-a08f-1e3ec23a7113(com.mbeddr.mpsutil.traceExplorer)" version="0" />
     <module reference="cf90f965-8554-4a16-aa0b-6387f27474ab(org.iets3.core.expr.base.interpreter)" version="0" />
     <module reference="07f696b4-29e7-4878-aefb-39cac5e8c6cc(org.iets3.core.expr.collections.interpreter)" version="0" />
+    <module reference="a205582f-4182-4cf8-b061-99a91555b8b9(org.iets3.core.expr.genjs.core.devkit)" version="0" />
+    <module reference="cb743fb5-230f-4298-84e4-59b7101f05e8(org.iets3.core.expr.genjs.core.genplan)" version="0" />
     <module reference="f546cce3-c8d9-4d9f-891b-000fef6c17ba(org.iets3.core.expr.genjs.core.test)" version="0" />
     <module reference="8ba65567-1c8a-4983-beb8-0482324d7e44(org.iets3.core.expr.lambda.interpreter)" version="0" />
     <module reference="0495221f-9fd1-41d6-bf26-b3b8aeb7eb7b(org.iets3.core.expr.lambda.plugin)" version="0" />

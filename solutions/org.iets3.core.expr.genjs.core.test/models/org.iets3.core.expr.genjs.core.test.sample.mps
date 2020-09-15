@@ -3,6 +3,7 @@
   <persistence version="9" />
   <languages>
     <devkit ref="c4e521ab-b605-4ef9-a7c3-68075da058f0(org.iets3.core.expr.core.devkit)" />
+    <devkit ref="a205582f-4182-4cf8-b061-99a91555b8b9(org.iets3.core.expr.genjs.core.devkit)" />
   </languages>
   <imports />
   <registry>
