@@ -5,14 +5,14 @@
   <property name="build.layout" location="${build.dir}/artifacts/iets3.opensource.genjs" />
   <property name="mps_home" location="" />
   <property name="iets3.github.opensource.home" location="" />
-  <property name="artifacts.root" location="${iets3.github.opensource.home}/artifacts" />
-  <property name="mbeddr.artifacts.platform" location="${artifacts.root}/com.mbeddr.platform" />
-  <property name="jetbrains.mps.samples.Physics.home" location="" />
+  <property name="iets3.github.opensource.artifacts" location="${iets3.github.opensource.home}/artifacts/org.iets3.opensource" />
+  <property name="mbeddr.artifacts.platform" location="${iets3.github.opensource.home}/artifacts/com.mbeddr.platform" />
   <property name="ecmascript4mps.home" location="" />
+  <property name="ecmascript4mps.artifacts" location="${ecmascript4mps.home}/build/artifacts/ecmascript4mps" />
   <property name="artifacts.mps" location="${mps_home}" />
   <property name="artifacts.com.mbeddr.platform" location="${mbeddr.artifacts.platform}" />
-  <property name="artifacts.org.iets3.opensource" location="${iets3.github.opensource.home}" />
-  <property name="artifacts.ecmascript4mps" location="${ecmascript4mps.home}" />
+  <property name="artifacts.org.iets3.opensource" location="${iets3.github.opensource.artifacts}" />
+  <property name="artifacts.ecmascript4mps" location="${ecmascript4mps.artifacts}" />
   <property file="${artifacts.mps}/build.properties" prefix="import.mps" />
   <property file="${artifacts.com.mbeddr.platform}/build.properties" prefix="import.com.mbeddr.platform" />
   <property file="${artifacts.org.iets3.opensource}/build.properties" prefix="import.org.iets3.opensource" />
@@ -22,6 +22,10 @@
   <property name="mps.teamcity.buildConfName" value="${import.mps.mps.teamcity.buildConfName}" />
   <property name="mps.idea.platform.build.number" value="${import.mps.mps.idea.platform.build.number}" />
   <property name="mps.mps.build.counter" value="${import.mps.mps.mps.build.counter}" />
+  <property name="mpsBootstrapCore.version.major" value="${import.mps.mpsBootstrapCore.version.major}" />
+  <property name="mpsBootstrapCore.version.minor" value="${import.mps.mpsBootstrapCore.version.minor}" />
+  <property name="mpsBootstrapCore.version.bugfixNr" value="${import.mps.mpsBootstrapCore.version.bugfixNr}" />
+  <property name="mpsBootstrapCore.version.eap" value="${import.mps.mpsBootstrapCore.version.eap}" />
   <property name="mpsBootstrapCore.version" value="${import.mps.mpsBootstrapCore.version}" />
   <property name="com.mbeddr.platform.major.version" value="${import.com.mbeddr.platform.com.mbeddr.platform.major.version}" />
   <property name="com.mbeddr.platform.minor.version" value="${import.com.mbeddr.platform.com.mbeddr.platform.minor.version}" />
@@ -584,7 +588,6 @@
           <language id="l:b401a680-8325-4110-8fd3-84331ff25bef:jetbrains.mps.lang.generator" />
           <language id="l:d7706f63-9be2-479c-a3da-ae92af1e64d5:jetbrains.mps.lang.generator.generationContext" />
           <language id="l:3a13115c-633c-4c5c-bbcc-75c4219e9555:jetbrains.mps.lang.quotation" />
-          <language id="l:acbc5fbb-8801-4f62-a053-ab017db885db:org.iets3.core.expr.genjs.base" />
           <language id="l:a4829704-6b1b-4b3f-8122-a4a2e6ac90ff:org.mar9000.mps.ecmascript" />
           <language id="l:7c445dfe-2a01-4a0e-84bd-4d6b91c112c9:org.mar9000.mps.ecmascript.modules" />
         </uses>
@@ -681,15 +684,12 @@
     <zip destfile="${build.layout}/iets3.opensource.genjs.zip">
       <fileset dir="${build.tmp}/default/iets3.opensource.genjs.zip" />
     </zip>
-    <echo file="${build.layout}/build.properties">mps.build.number=${mps.build.number}${line.separator}mps.date=${mps.date}${line.separator}mps.build.vcs.number=${mps.build.vcs.number}${line.separator}mps.teamcity.buildConfName=${mps.teamcity.buildConfName}${line.separator}mps.idea.platform.build.number=${mps.idea.platform.build.number}${line.separator}mps.mps.build.counter=${mps.mps.build.counter}${line.separator}mpsBootstrapCore.version=${mpsBootstrapCore.version}${line.separator}com.mbeddr.platform.major.version=${com.mbeddr.platform.major.version}${line.separator}com.mbeddr.platform.minor.version=${com.mbeddr.platform.minor.version}${line.separator}com.mbeddr.platform.build=${com.mbeddr.platform.build}${line.separator}com.mbeddr.platform.mbeddr.version=${com.mbeddr.platform.mbeddr.version}${line.separator}de.itemis.mps.extensions.versionNumber=${de.itemis.mps.extensions.versionNumber}${line.separator}org.iets3.opensource.minor=${org.iets3.opensource.minor}${line.separator}org.iets3.opensource.major=${org.iets3.opensource.major}${line.separator}org.iets3.opensource.build=${org.iets3.opensource.build}${line.separator}org.iets3.opensource.version=${org.iets3.opensource.version}</echo>
+    <echo file="${build.layout}/build.properties">mps.build.number=${mps.build.number}${line.separator}mps.date=${mps.date}${line.separator}mps.build.vcs.number=${mps.build.vcs.number}${line.separator}mps.teamcity.buildConfName=${mps.teamcity.buildConfName}${line.separator}mps.idea.platform.build.number=${mps.idea.platform.build.number}${line.separator}mps.mps.build.counter=${mps.mps.build.counter}${line.separator}mpsBootstrapCore.version.major=${mpsBootstrapCore.version.major}${line.separator}mpsBootstrapCore.version.minor=${mpsBootstrapCore.version.minor}${line.separator}mpsBootstrapCore.version.bugfixNr=${mpsBootstrapCore.version.bugfixNr}${line.separator}mpsBootstrapCore.version.eap=${mpsBootstrapCore.version.eap}${line.separator}mpsBootstrapCore.version=${mpsBootstrapCore.version}${line.separator}com.mbeddr.platform.major.version=${com.mbeddr.platform.major.version}${line.separator}com.mbeddr.platform.minor.version=${com.mbeddr.platform.minor.version}${line.separator}com.mbeddr.platform.build=${com.mbeddr.platform.build}${line.separator}com.mbeddr.platform.mbeddr.version=${com.mbeddr.platform.mbeddr.version}${line.separator}de.itemis.mps.extensions.versionNumber=${de.itemis.mps.extensions.versionNumber}${line.separator}org.iets3.opensource.minor=${org.iets3.opensource.minor}${line.separator}org.iets3.opensource.major=${org.iets3.opensource.major}${line.separator}org.iets3.opensource.build=${org.iets3.opensource.build}${line.separator}org.iets3.opensource.version=${org.iets3.opensource.version}</echo>
   </target>
   
   <target name="buildDependents" />
   
-  <target name="fetchDependencies">
-    <mkdir dir="${build.tmp}/deps/ecmascript4mps/ecmascript4mps.zip" />
-    <unzip src="${artifacts.ecmascript4mps}/ecmascript4mps.zip" dest="${build.tmp}/deps/ecmascript4mps/ecmascript4mps.zip" />
-  </target>
+  <target name="fetchDependencies" />
   
   <target name="build" depends="assemble" />
   
@@ -740,6 +740,7 @@
       <plugin path="${artifacts.com.mbeddr.platform}/mps-multiline" />
       <plugin path="${artifacts.com.mbeddr.platform}/mps-richtext" />
       <plugin path="${artifacts.com.mbeddr.platform}/mps-tables" />
+      <plugin path="${artifacts.ecmascript4mps}/ecmascript4mps" />
       <plugin path="${artifacts.mps}/lib/mps-workbench.jar" />
       <plugin path="${artifacts.mps}/plugins/mps-build" />
       <plugin path="${artifacts.mps}/plugins/mps-core" />
@@ -747,7 +748,6 @@
       <plugin path="${artifacts.mps}/plugins/mps-testing" />
       <plugin path="${artifacts.mps}/plugins/mps-tooltips" />
       <plugin path="${artifacts.org.iets3.opensource}/org.iets3.core.os" />
-      <plugin path="${build.tmp}/deps/ecmascript4mps/ecmascript4mps.zip/ecmascript4mps" />
       <library file="${artifacts.com.mbeddr.platform}/com.mbeddr.mpsutil.common/languages/group.common/com.mbeddr.mpsutil.common.jar" />
       <library file="${artifacts.com.mbeddr.platform}/com.mbeddr.mpsutil.contextactions/languages/group.contextactions/com.mbeddr.mpsutil.contextactions.runtime.jar" />
       <library file="${artifacts.com.mbeddr.platform}/com.mbeddr.mpsutil.filepicker/languages/group.filepicker/com.mbeddr.mpsutil.filepicker.jar" />
@@ -771,6 +771,7 @@
       <library file="${artifacts.com.mbeddr.platform}/mps-apache-commons/languages/mps-apache-commons-math/org.apache.commons.jar" />
       <library file="${artifacts.com.mbeddr.platform}/mps-multiline/languages/mps-multiline/de.slisson.mps.editor.multiline.runtime.jar" />
       <library file="${artifacts.com.mbeddr.platform}/mps-richtext/languages/mps-richtext/de.slisson.mps.richtext.jar" />
+      <library file="${artifacts.ecmascript4mps}/ecmascript4mps/languages/ecmascript4mps/org.mar9000.mps.ecmascript.jar" />
       <library file="${artifacts.mps}/languages/baseLanguage/closures.runtime.jar" />
       <library file="${artifacts.mps}/languages/baseLanguage/collections.runtime.jar" />
       <library file="${artifacts.mps}/languages/baseLanguage/jetbrains.mps.baseLanguage.blTypes.jar" />
@@ -907,7 +908,6 @@
       <library file="${artifacts.org.iets3.opensource}/org.iets3.core.os/languages/iets3.core.os/org.iets3.core.expr.path.jar" />
       <library file="${artifacts.org.iets3.opensource}/org.iets3.core.os/languages/iets3.core.os/org.iets3.core.expr.simpleTypes.jar" />
       <library file="${artifacts.org.iets3.opensource}/org.iets3.core.os/languages/iets3.core.os/org.iets3.core.expr.toplevel.jar" />
-      <library file="${build.tmp}/deps/ecmascript4mps/ecmascript4mps.zip/ecmascript4mps/languages/ecmascript4mps/org.mar9000.mps.ecmascript.jar" />
       <chunk>
         <module file="${basedir}/languages/org.iets3.core.expr.genjs.base/org.iets3.core.expr.genjs.base.mpl" />
         <module file="${basedir}/devkits/org.iets3.core.expr.genjs.core.devkit/org.iets3.core.expr.genjs.core.devkit.devkit" />
@@ -923,10 +923,10 @@
       </jvmargs>
       <macro name="mps_home" path="${mps_home}" />
       <macro name="iets3.github.opensource.home" path="${iets3.github.opensource.home}" />
-      <macro name="artifacts.root" path="${artifacts.root}" />
+      <macro name="iets3.github.opensource.artifacts" path="${iets3.github.opensource.artifacts}" />
       <macro name="mbeddr.artifacts.platform" path="${mbeddr.artifacts.platform}" />
-      <macro name="jetbrains.mps.samples.Physics.home" path="${jetbrains.mps.samples.Physics.home}" />
       <macro name="ecmascript4mps.home" path="${ecmascript4mps.home}" />
+      <macro name="ecmascript4mps.artifacts" path="${ecmascript4mps.artifacts}" />
     </generate>
   </target>
   
@@ -978,14 +978,11 @@
         <fileset file="${artifacts.mps}/lib/jdom.jar" />
         <fileset file="${artifacts.mps}/lib/trove4j.jar" />
         <fileset file="${artifacts.mps}/lib/ecj-4.13.jar" />
-        <fileset file="${artifacts.mps}/languages/baseLanguage/jetbrains.mps.baseLanguage.jar" />
         <fileset file="${artifacts.mps}/languages/baseLanguage/jetbrains.mps.baseLanguage.logging.runtime.jar" />
-        <fileset file="${artifacts.mps}/languages/baseLanguage/jetbrains.mps.baseLanguage.scopes.jar" />
         <fileset file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.core.jar" />
         <fileset file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.descriptor.aspects.jar" />
         <fileset file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.scopes.runtime.jar" />
-        <fileset file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.traceable.jar" />
-        <fileset file="${build.tmp}/deps/ecmascript4mps/ecmascript4mps.zip/ecmascript4mps/languages/ecmascript4mps/org.mar9000.mps.ecmascript.jar" />
+        <fileset file="${artifacts.ecmascript4mps}/ecmascript4mps/languages/ecmascript4mps/org.mar9000.mps.ecmascript.jar" />
       </classpath>
     </javac>
   </target>
@@ -1033,12 +1030,9 @@
         <fileset file="${artifacts.mps}/lib/jdom.jar" />
         <fileset file="${artifacts.mps}/lib/trove4j.jar" />
         <fileset file="${artifacts.mps}/lib/ecj-4.13.jar" />
-        <fileset file="${artifacts.mps}/languages/baseLanguage/jetbrains.mps.baseLanguage.jar" />
         <fileset file="${artifacts.mps}/languages/baseLanguage/jetbrains.mps.baseLanguage.logging.runtime.jar" />
-        <fileset file="${artifacts.mps}/languages/baseLanguage/jetbrains.mps.baseLanguage.scopes.jar" />
         <fileset file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.core.jar" />
-        <fileset file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.traceable.jar" />
-        <fileset file="${build.tmp}/deps/ecmascript4mps/ecmascript4mps.zip/ecmascript4mps/languages/ecmascript4mps/org.mar9000.mps.ecmascript.jar" />
+        <fileset file="${artifacts.ecmascript4mps}/ecmascript4mps/languages/ecmascript4mps/org.mar9000.mps.ecmascript.jar" />
       </classpath>
     </javac>
   </target>
@@ -1121,7 +1115,7 @@
         <fileset file="${artifacts.org.iets3.opensource}/org.iets3.core.os/languages/iets3.core.os/org.iets3.core.expr.path.jar" />
         <fileset file="${artifacts.org.iets3.opensource}/org.iets3.core.os/languages/iets3.core.os/org.iets3.core.expr.simpleTypes.jar" />
         <fileset file="${artifacts.org.iets3.opensource}/org.iets3.core.os/languages/iets3.core.os/org.iets3.core.expr.toplevel.jar" />
-        <fileset file="${build.tmp}/deps/ecmascript4mps/ecmascript4mps.zip/ecmascript4mps/languages/ecmascript4mps/org.mar9000.mps.ecmascript.jar" />
+        <fileset file="${artifacts.ecmascript4mps}/ecmascript4mps/languages/ecmascript4mps/org.mar9000.mps.ecmascript.jar" />
         <fileset dir="${artifacts.com.mbeddr.platform}/mps-multiline/lib" includes="diff_match_patch.jar" />
       </classpath>
     </javac>
@@ -1204,7 +1198,7 @@
         <fileset file="${artifacts.org.iets3.opensource}/org.iets3.core.os/languages/iets3.core.os/org.iets3.core.expr.path.jar" />
         <fileset file="${artifacts.org.iets3.opensource}/org.iets3.core.os/languages/iets3.core.os/org.iets3.core.expr.simpleTypes.jar" />
         <fileset file="${artifacts.org.iets3.opensource}/org.iets3.core.os/languages/iets3.core.os/org.iets3.core.expr.toplevel.jar" />
-        <fileset file="${build.tmp}/deps/ecmascript4mps/ecmascript4mps.zip/ecmascript4mps/languages/ecmascript4mps/org.mar9000.mps.ecmascript.jar" />
+        <fileset file="${artifacts.ecmascript4mps}/ecmascript4mps/languages/ecmascript4mps/org.mar9000.mps.ecmascript.jar" />
         <fileset dir="${artifacts.com.mbeddr.platform}/mps-multiline/lib" includes="diff_match_patch.jar" />
       </classpath>
     </javac>
@@ -1286,7 +1280,7 @@
         <fileset file="${artifacts.org.iets3.opensource}/org.iets3.core.os/languages/iets3.core.os/org.iets3.core.expr.collections.jar" />
         <fileset file="${artifacts.org.iets3.opensource}/org.iets3.core.os/languages/iets3.core.os/org.iets3.core.expr.lambda.jar" />
         <fileset file="${artifacts.org.iets3.opensource}/org.iets3.core.os/languages/iets3.core.os/org.iets3.core.expr.simpleTypes.jar" />
-        <fileset file="${build.tmp}/deps/ecmascript4mps/ecmascript4mps.zip/ecmascript4mps/languages/ecmascript4mps/org.mar9000.mps.ecmascript.jar" />
+        <fileset file="${artifacts.ecmascript4mps}/ecmascript4mps/languages/ecmascript4mps/org.mar9000.mps.ecmascript.jar" />
         <fileset dir="${artifacts.com.mbeddr.platform}/mps-multiline/lib" includes="diff_match_patch.jar" />
       </classpath>
     </javac>
@@ -1366,7 +1360,7 @@
         <fileset file="${artifacts.org.iets3.opensource}/org.iets3.core.os/languages/iets3.core.os/org.iets3.core.expr.collections.jar" />
         <fileset file="${artifacts.org.iets3.opensource}/org.iets3.core.os/languages/iets3.core.os/org.iets3.core.expr.lambda.jar" />
         <fileset file="${artifacts.org.iets3.opensource}/org.iets3.core.os/languages/iets3.core.os/org.iets3.core.expr.simpleTypes.jar" />
-        <fileset file="${build.tmp}/deps/ecmascript4mps/ecmascript4mps.zip/ecmascript4mps/languages/ecmascript4mps/org.mar9000.mps.ecmascript.jar" />
+        <fileset file="${artifacts.ecmascript4mps}/ecmascript4mps/languages/ecmascript4mps/org.mar9000.mps.ecmascript.jar" />
         <fileset dir="${artifacts.com.mbeddr.platform}/mps-multiline/lib" includes="diff_match_patch.jar" />
       </classpath>
     </javac>
@@ -1448,7 +1442,7 @@
         <fileset file="${artifacts.org.iets3.opensource}/org.iets3.core.os/languages/iets3.core.os/org.iets3.core.expr.lambda.jar" />
         <fileset file="${artifacts.org.iets3.opensource}/org.iets3.core.os/languages/iets3.core.os/org.iets3.core.expr.path.jar" />
         <fileset file="${artifacts.org.iets3.opensource}/org.iets3.core.os/languages/iets3.core.os/org.iets3.core.expr.toplevel.jar" />
-        <fileset file="${build.tmp}/deps/ecmascript4mps/ecmascript4mps.zip/ecmascript4mps/languages/ecmascript4mps/org.mar9000.mps.ecmascript.jar" />
+        <fileset file="${artifacts.ecmascript4mps}/ecmascript4mps/languages/ecmascript4mps/org.mar9000.mps.ecmascript.jar" />
         <fileset dir="${artifacts.com.mbeddr.platform}/mps-multiline/lib" includes="diff_match_patch.jar" />
       </classpath>
     </javac>
@@ -1528,7 +1522,7 @@
         <fileset file="${artifacts.org.iets3.opensource}/org.iets3.core.os/languages/iets3.core.os/org.iets3.core.expr.lambda.jar" />
         <fileset file="${artifacts.org.iets3.opensource}/org.iets3.core.os/languages/iets3.core.os/org.iets3.core.expr.path.jar" />
         <fileset file="${artifacts.org.iets3.opensource}/org.iets3.core.os/languages/iets3.core.os/org.iets3.core.expr.toplevel.jar" />
-        <fileset file="${build.tmp}/deps/ecmascript4mps/ecmascript4mps.zip/ecmascript4mps/languages/ecmascript4mps/org.mar9000.mps.ecmascript.jar" />
+        <fileset file="${artifacts.ecmascript4mps}/ecmascript4mps/languages/ecmascript4mps/org.mar9000.mps.ecmascript.jar" />
         <fileset dir="${artifacts.com.mbeddr.platform}/mps-multiline/lib" includes="diff_match_patch.jar" />
       </classpath>
     </javac>

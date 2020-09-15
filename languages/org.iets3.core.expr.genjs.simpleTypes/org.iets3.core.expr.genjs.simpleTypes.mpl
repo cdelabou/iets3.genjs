@@ -27,7 +27,6 @@
         <dependency reexport="false">6b277d9a-d52d-416f-a209-1919bd737f50(org.iets3.core.expr.simpleTypes)</dependency>
         <dependency reexport="false">4166eb0f-595e-4b4f-9c9b-ac5141ea2ae7(org.iets3.core.expr.genjs.base#01)</dependency>
         <dependency reexport="false">a4829704-6b1b-4b3f-8122-a4a2e6ac90ff(org.mar9000.mps.ecmascript)</dependency>
-        <dependency reexport="false">7c445dfe-2a01-4a0e-84bd-4d6b91c112c9(org.mar9000.mps.ecmascript.modules)</dependency>
       </dependencies>
       <languageVersions>
         <language slang="l:f3061a53-9226-4cc5-a443-f952ceaf5816:jetbrains.mps.baseLanguage" version="11" />
@@ -42,7 +41,7 @@
         <language slang="l:c72da2b9-7cce-4447-8389-f407dc1158b7:jetbrains.mps.lang.structure" version="9" />
         <language slang="l:9ded098b-ad6a-4657-bfd9-48636cfe8bc3:jetbrains.mps.lang.traceable" version="0" />
         <language slang="l:7a5dda62-9140-4668-ab76-d5ed1746f2b2:jetbrains.mps.lang.typesystem" version="5" />
-        <language slang="l:a4829704-6b1b-4b3f-8122-a4a2e6ac90ff:org.mar9000.mps.ecmascript" version="0" />
+        <language slang="l:a4829704-6b1b-4b3f-8122-a4a2e6ac90ff:org.mar9000.mps.ecmascript" version="14" />
         <language slang="l:7c445dfe-2a01-4a0e-84bd-4d6b91c112c9:org.mar9000.mps.ecmascript.modules" version="0" />
       </languageVersions>
       <dependencyVersions>
@@ -88,7 +87,6 @@
         <module reference="9464fa06-5ab9-409b-9274-64ab29588457(org.iets3.core.expr.lambda)" version="0" />
         <module reference="6b277d9a-d52d-416f-a209-1919bd737f50(org.iets3.core.expr.simpleTypes)" version="1" />
         <module reference="a4829704-6b1b-4b3f-8122-a4a2e6ac90ff(org.mar9000.mps.ecmascript)" version="0" />
-        <module reference="7c445dfe-2a01-4a0e-84bd-4d6b91c112c9(org.mar9000.mps.ecmascript.modules)" version="0" />
       </dependencyVersions>
       <mapping-priorities />
     </generator>

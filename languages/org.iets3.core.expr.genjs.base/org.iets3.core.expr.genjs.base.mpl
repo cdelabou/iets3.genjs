@@ -44,7 +44,7 @@
         <language slang="l:c7fb639f-be78-4307-89b0-b5959c3fa8c8:jetbrains.mps.lang.text" version="0" />
         <language slang="l:9ded098b-ad6a-4657-bfd9-48636cfe8bc3:jetbrains.mps.lang.traceable" version="0" />
         <language slang="l:7a5dda62-9140-4668-ab76-d5ed1746f2b2:jetbrains.mps.lang.typesystem" version="5" />
-        <language slang="l:a4829704-6b1b-4b3f-8122-a4a2e6ac90ff:org.mar9000.mps.ecmascript" version="0" />
+        <language slang="l:a4829704-6b1b-4b3f-8122-a4a2e6ac90ff:org.mar9000.mps.ecmascript" version="14" />
         <language slang="l:8f0eae8f-9a27-47a8-b422-14b27e5adf31:org.mar9000.mps.ecmascript.es6wrapper" version="0" />
         <language slang="l:7c445dfe-2a01-4a0e-84bd-4d6b91c112c9:org.mar9000.mps.ecmascript.modules" version="0" />
       </languageVersions>

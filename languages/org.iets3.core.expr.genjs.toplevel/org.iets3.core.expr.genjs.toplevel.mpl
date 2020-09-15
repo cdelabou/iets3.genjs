@@ -28,8 +28,7 @@
         <language slang="l:d7706f63-9be2-479c-a3da-ae92af1e64d5:jetbrains.mps.lang.generator.generationContext" version="2" />
         <language slang="l:3a13115c-633c-4c5c-bbcc-75c4219e9555:jetbrains.mps.lang.quotation" version="5" />
         <language slang="l:9ded098b-ad6a-4657-bfd9-48636cfe8bc3:jetbrains.mps.lang.traceable" version="0" />
-        <language slang="l:acbc5fbb-8801-4f62-a053-ab017db885db:org.iets3.core.expr.genjs.base" version="0" />
-        <language slang="l:a4829704-6b1b-4b3f-8122-a4a2e6ac90ff:org.mar9000.mps.ecmascript" version="0" />
+        <language slang="l:a4829704-6b1b-4b3f-8122-a4a2e6ac90ff:org.mar9000.mps.ecmascript" version="14" />
         <language slang="l:7c445dfe-2a01-4a0e-84bd-4d6b91c112c9:org.mar9000.mps.ecmascript.modules" version="0" />
       </languageVersions>
       <dependencyVersions>

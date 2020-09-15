@@ -58,7 +58,7 @@
     <node concept="1TJgyi" id="h7N6XeyysV" role="1TKVEl">
       <property role="IQ2nx" value="308439877929281339" />
       <property role="TrG5h" value="asName" />
-      <ref role="AX2Wp" to="rh3e:2J96awjcT_d" resolve="_JSIdentifierName" />
+      <ref role="AX2Wp" to="tpck:fKAOsGN" resolve="string" />
     </node>
     <node concept="1TJgyj" id="h7N6XeyysX" role="1TKVEi">
       <property role="IQ2ns" value="308439877929281341" />
@@ -110,12 +110,12 @@
       <property role="IQ2ns" value="308439877930216896" />
       <property role="20lmBu" value="fLJjDmT/aggregation" />
       <property role="20kJfa" value="content" />
-      <ref role="20lvS9" to="rh3e:7rFtnRVF22p" resolve="JSExpression" />
+      <ref role="20lvS9" to="rh3e:7rFtnRVF22p" resolve="JSPrimaryExpression" />
     </node>
     <node concept="1TJgyi" id="h7N6XeA6R1" role="1TKVEl">
       <property role="IQ2nx" value="308439877930216897" />
       <property role="TrG5h" value="name" />
-      <ref role="AX2Wp" to="rh3e:2J96awjcT_d" resolve="_JSIdentifierName" />
+      <ref role="AX2Wp" to="tpck:fKAOsGN" resolve="string" />
     </node>
     <node concept="PrWs8" id="6nL1QEfGrJB" role="PzmwI">
       <ref role="PrY4T" to="tpck:3fifI_xCcJN" resolve="ScopeProvider" />
@@ -126,13 +126,13 @@
     <property role="TrG5h" value="SpreadOpExpression" />
     <property role="34LRSv" value="..." />
     <property role="3GE5qa" value="operations" />
-    <ref role="1TJDcQ" to="rh3e:7rFtnRVF22p" resolve="JSExpression" />
+    <ref role="1TJDcQ" to="rh3e:7rFtnRVF22p" resolve="JSPrimaryExpression" />
     <node concept="1TJgyj" id="64nSO$M3t_a" role="1TKVEi">
       <property role="IQ2ns" value="6996310449655241034" />
       <property role="20lmBu" value="fLJjDmT/aggregation" />
       <property role="20kJfa" value="target" />
       <property role="20lbJX" value="fLJekj4/_1" />
-      <ref role="20lvS9" to="rh3e:7rFtnRVF22p" resolve="JSExpression" />
+      <ref role="20lvS9" to="rh3e:7rFtnRVF22p" resolve="JSPrimaryExpression" />
     </node>
   </node>
   <node concept="1TIwiD" id="64nSO$MfTiC">
@@ -189,7 +189,7 @@
       <property role="IQ2ns" value="4053078317111151292" />
       <property role="20lmBu" value="fLJjDmT/aggregation" />
       <property role="20kJfa" value="content" />
-      <ref role="20lvS9" to="rh3e:7rFtnRVF22p" resolve="JSExpression" />
+      <ref role="20lvS9" to="rh3e:7rFtnRVF22p" resolve="JSPrimaryExpression" />
     </node>
   </node>
 </model>
