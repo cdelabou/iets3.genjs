@@ -8,9 +8,17 @@
   <imports />
   <registry>
     <language id="2f7e2e35-6e74-4c43-9fa5-2465d68f5996" name="org.iets3.core.expr.collections">
+      <concept id="8872269265520081293" name="org.iets3.core.expr.collections.structure.SetLiteral" flags="ng" index="2TO1xI">
+        <child id="8872269265520081294" name="elements" index="2TO1xH" />
+      </concept>
+      <concept id="7554398283340640412" name="org.iets3.core.expr.collections.structure.MapOp" flags="ng" index="3iw6QE" />
+      <concept id="7554398283340020764" name="org.iets3.core.expr.collections.structure.OneArgCollectionOp" flags="ng" index="3iAY4E">
+        <child id="7554398283340020765" name="arg" index="3iAY4F" />
+      </concept>
       <concept id="7554398283339759319" name="org.iets3.core.expr.collections.structure.ListLiteral" flags="ng" index="3iBYfx">
         <child id="7554398283339759320" name="elements" index="3iBYfI" />
       </concept>
+      <concept id="24388123216554083" name="org.iets3.core.expr.collections.structure.FindFirstOp" flags="ng" index="1HmgMX" />
       <concept id="4931785860342338320" name="org.iets3.core.expr.collections.structure.FoldOp" flags="ng" index="1XzICc">
         <child id="4931785860342371144" name="combiner" index="1YsmDk" />
         <child id="4931785860342371141" name="seed" index="1YsmDp" />
@@ -21,10 +29,14 @@
       <concept id="7089558164905593724" name="org.iets3.core.expr.base.structure.IOptionallyTyped" flags="ng" index="2zM23E">
         <child id="7089558164905593725" name="type" index="2zM23F" />
       </concept>
+      <concept id="5115872837157187871" name="org.iets3.core.expr.base.structure.ParensExpression" flags="ng" index="30bsCy">
+        <child id="5115872837157187954" name="expr" index="30bsDf" />
+      </concept>
       <concept id="5115872837156802409" name="org.iets3.core.expr.base.structure.UnaryExpression" flags="ng" index="30czhk">
         <child id="5115872837156802411" name="expr" index="30czhm" />
       </concept>
       <concept id="5115872837156855227" name="org.iets3.core.expr.base.structure.UnaryMinusExpression" flags="ng" index="30cIq6" />
+      <concept id="5115872837156687764" name="org.iets3.core.expr.base.structure.GreaterExpression" flags="ng" index="30d7iD" />
       <concept id="5115872837156652603" name="org.iets3.core.expr.base.structure.DivExpression" flags="ng" index="30dvO6" />
       <concept id="5115872837156652453" name="org.iets3.core.expr.base.structure.MinusExpression" flags="ng" index="30dvUo" />
       <concept id="5115872837156578671" name="org.iets3.core.expr.base.structure.MulExpression" flags="ng" index="30dDTi" />
@@ -48,6 +60,10 @@
       <concept id="8219602584782245544" name="org.iets3.core.expr.simpleTypes.structure.NumberType" flags="ng" index="mLuIC">
         <child id="1330041117646892920" name="range" index="2gteSx" />
         <child id="1330041117646892937" name="prec" index="2gteVg" />
+      </concept>
+      <concept id="4513425716319387765" name="org.iets3.core.expr.simpleTypes.structure.StringParseIntTarget" flags="ng" index="2zXAyN" />
+      <concept id="5115872837157252552" name="org.iets3.core.expr.simpleTypes.structure.StringLiteral" flags="ng" index="30bdrP">
+        <property id="5115872837157252555" name="value" index="30bdrQ" />
       </concept>
       <concept id="5115872837157054284" name="org.iets3.core.expr.simpleTypes.structure.RealType" flags="ng" index="30bXLL" />
       <concept id="5115872837157054169" name="org.iets3.core.expr.simpleTypes.structure.IntegerType" flags="ng" index="30bXR$" />
@@ -93,6 +109,10 @@
       <concept id="7554398283340318473" name="org.iets3.core.expr.lambda.structure.IArgument" flags="ng" index="3ix9CZ">
         <child id="7554398283340318476" name="type" index="3ix9CU" />
       </concept>
+      <concept id="7554398283340741814" name="org.iets3.core.expr.lambda.structure.ShortLambdaExpression" flags="ng" index="3izI60">
+        <child id="7554398283340741815" name="expression" index="3izI61" />
+      </concept>
+      <concept id="7554398283340826520" name="org.iets3.core.expr.lambda.structure.ShortLambdaItExpression" flags="ng" index="3izPEI" />
     </language>
   </registry>
   <node concept="_iOnU" id="7d$2O1JJb$j">
@@ -202,7 +222,55 @@
         </node>
       </node>
     </node>
-    <node concept="_ixoA" id="6jT4GDw0zOf" role="_iOnB" />
+    <node concept="2zPypq" id="2GLR80HT5yB" role="_iOnB">
+      <property role="TrG5h" value="someText" />
+      <node concept="30dDZf" id="2GLR80HT_2N" role="2zPyp_">
+        <node concept="30bdrP" id="2GLR80HT_2O" role="30dEsF">
+          <property role="30bdrQ" value="yes" />
+        </node>
+        <node concept="30bsCy" id="2GLR80HT_2P" role="30dEs_">
+          <node concept="30dDZf" id="2GLR80HT_2Q" role="30bsDf">
+            <node concept="30bXRB" id="2GLR80HT_2R" role="30dEsF">
+              <property role="30bXRw" value="4" />
+            </node>
+            <node concept="1QScDb" id="2GLR80HT_2S" role="30dEs_">
+              <node concept="1QScDb" id="2GLR80HT_2T" role="30czhm">
+                <node concept="2TO1xI" id="2GLR80HTzLU" role="30czhm">
+                  <node concept="30bdrP" id="2GLR80HTzME" role="2TO1xH">
+                    <property role="30bdrQ" value="1" />
+                  </node>
+                  <node concept="30bdrP" id="2GLR80HTzRf" role="2TO1xH">
+                    <property role="30bdrQ" value="2" />
+                  </node>
+                  <node concept="30bdrP" id="2GLR80HTzWj" role="2TO1xH">
+                    <property role="30bdrQ" value="3" />
+                  </node>
+                </node>
+                <node concept="3iw6QE" id="2GLR80HT$3s" role="1QScD9">
+                  <node concept="3izI60" id="2GLR80HT$3t" role="3iAY4F">
+                    <node concept="1QScDb" id="2GLR80HT$op" role="3izI61">
+                      <node concept="2zXAyN" id="2GLR80HT$qc" role="1QScD9" />
+                      <node concept="3izPEI" id="2GLR80HT$lp" role="30czhm" />
+                    </node>
+                  </node>
+                </node>
+              </node>
+              <node concept="1HmgMX" id="2GLR80HT$zE" role="1QScD9">
+                <node concept="3izI60" id="2GLR80HT$zF" role="3iAY4F">
+                  <node concept="30d7iD" id="2GLR80HT$Fr" role="3izI61">
+                    <node concept="30bXRB" id="2GLR80HT$LQ" role="30dEs_">
+                      <property role="30bXRw" value="1" />
+                    </node>
+                    <node concept="3izPEI" id="2GLR80HT$zH" role="30dEsF" />
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node concept="_ixoA" id="2GLR80HT5DX" role="_iOnB" />
     <node concept="2zPypq" id="7Wa2sv44gWb" role="_iOnB">
       <property role="TrG5h" value="a1" />
       <node concept="30dDZf" id="7Wa2sv44tPt" role="2zPyp_">

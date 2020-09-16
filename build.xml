@@ -270,6 +270,7 @@
           <language id="l:7a5dda62-9140-4668-ab76-d5ed1746f2b2:jetbrains.mps.lang.typesystem" />
           <language id="l:c9d137c4-3259-44f8-80ff-33ab2b506ee4:jetbrains.mps.lang.util.order" />
           <language id="l:696c1165-4a59-463b-bc5d-902caab85dd0:jetbrains.mps.make.facet" />
+          <language id="l:a4829704-6b1b-4b3f-8122-a4a2e6ac90ff:org.mar9000.mps.ecmascript" />
         </uses>
         <classpath>
           <entry path="." />
@@ -389,7 +390,6 @@
           <module ref="acbc5fbb-8801-4f62-a053-ab017db885db(org.iets3.core.expr.genjs.base)" kind="cl" />
           <module ref="6b277d9a-d52d-416f-a209-1919bd737f50(org.iets3.core.expr.simpleTypes)" kind="cl" />
           <module ref="a4829704-6b1b-4b3f-8122-a4a2e6ac90ff(org.mar9000.mps.ecmascript)" kind="cl" />
-          <module ref="7c445dfe-2a01-4a0e-84bd-4d6b91c112c9(org.mar9000.mps.ecmascript.modules)" kind="cl" />
         </dependencies>
         <uses>
           <language id="l:f3061a53-9226-4cc5-a443-f952ceaf5816:jetbrains.mps.baseLanguage" />
@@ -452,11 +452,11 @@
           <module ref="9a4afe51-f114-4595-b5df-048ce3c596be(jetbrains.mps.runtime)" kind="rt" />
           <module ref="cfaa4966-b7d5-4b69-b66a-309a6e1a7290(org.iets3.core.expr.base)" kind="cl" />
           <module ref="2f7e2e35-6e74-4c43-9fa5-2465d68f5996(org.iets3.core.expr.collections)" kind="cl" />
+          <module ref="acbc5fbb-8801-4f62-a053-ab017db885db(org.iets3.core.expr.genjs.base)" kind="cl" />
           <module ref="4166eb0f-595e-4b4f-9c9b-ac5141ea2ae7(org.iets3.core.expr.genjs.base#01)" kind="cl" />
           <module ref="f2122111-2e69-4f81-8e65-120416de80e8(org.iets3.core.expr.genjs.simpleTypes)" kind="cl" />
           <module ref="6b277d9a-d52d-416f-a209-1919bd737f50(org.iets3.core.expr.simpleTypes)" kind="cl" />
           <module ref="a4829704-6b1b-4b3f-8122-a4a2e6ac90ff(org.mar9000.mps.ecmascript)" kind="cl" />
-          <module ref="7c445dfe-2a01-4a0e-84bd-4d6b91c112c9(org.mar9000.mps.ecmascript.modules)" kind="cl" />
         </dependencies>
         <uses>
           <language id="l:f3061a53-9226-4cc5-a443-f952ceaf5816:jetbrains.mps.baseLanguage" />
@@ -1204,7 +1204,7 @@
     </javac>
   </target>
   
-  <target name="java.compile.org.iets3.core.expr.genjs.simpleTypes" depends="java.compile.org.iets3.core.expr.genjs.base, java.compile.org.mar9000.mps.ecmascript.modules, fetchDependencies">
+  <target name="java.compile.org.iets3.core.expr.genjs.simpleTypes" depends="java.compile.org.iets3.core.expr.genjs.base, fetchDependencies">
     <mkdir dir="${basedir}/languages/org.iets3.core.expr.genjs.simpleTypes/source_gen" />
     <mkdir dir="${build.tmp}/java/out/org.iets3.core.expr.genjs.simpleTypes" />
     <javac destdir="${build.tmp}/java/out/org.iets3.core.expr.genjs.simpleTypes" fork="true" encoding="utf8" includeantruntime="false" debug="true">
@@ -1242,7 +1242,6 @@
         <fileset file="${artifacts.mps}/lib/mps-project-check.jar" />
         <fileset file="${artifacts.mps}/lib/mps-textgen.jar" />
         <pathelement path="${build.tmp}/java/out/org.iets3.core.expr.genjs.base" />
-        <pathelement path="${build.tmp}/java/out/org.mar9000.mps.ecmascript.modules" />
         <fileset file="${artifacts.mps}/lib/annotations.jar" />
         <fileset dir="${artifacts.mps}/lib" includes="*.jar" />
         <fileset file="${artifacts.mps}/lib/log4j.jar" />
@@ -1286,7 +1285,7 @@
     </javac>
   </target>
   
-  <target name="java.compile.org.iets3.core.expr.genjs.simpleTypes#01" depends="java.compile.org.iets3.core.expr.genjs.base#01, java.compile.org.iets3.core.expr.genjs.simpleTypes, java.compile.org.mar9000.mps.ecmascript.modules, fetchDependencies">
+  <target name="java.compile.org.iets3.core.expr.genjs.simpleTypes#01" depends="java.compile.org.iets3.core.expr.genjs.base, java.compile.org.iets3.core.expr.genjs.base#01, java.compile.org.iets3.core.expr.genjs.simpleTypes, fetchDependencies">
     <mkdir dir="${basedir}/languages/org.iets3.core.expr.genjs.simpleTypes/generator/source_gen" />
     <mkdir dir="${build.tmp}/java/out/org.iets3.core.expr.genjs.simpleTypes#01" />
     <javac destdir="${build.tmp}/java/out/org.iets3.core.expr.genjs.simpleTypes#01" fork="true" encoding="utf8" includeantruntime="false" debug="true">
@@ -1299,8 +1298,13 @@
         <fileset file="${artifacts.mps}/lib/mps-annotations.jar" />
         <fileset file="${artifacts.mps}/lib/mps-openapi.jar" />
         <fileset file="${artifacts.mps}/lib/mps-context.jar" />
+        <fileset file="${artifacts.mps}/lib/mps-constraints-runtime.jar" />
+        <fileset file="${artifacts.mps}/lib/mps-problem.jar" />
+        <fileset file="${artifacts.mps}/lib/mps-feedback-api.jar" />
         <fileset file="${artifacts.mps}/plugins/mps-httpsupport/lib/httpsupport.jar" />
         <fileset file="${artifacts.mps}/lib/mps-platform.jar" />
+        <fileset file="${artifacts.mps}/lib/mps-messages-api.jar" />
+        <fileset file="${artifacts.mps}/lib/mps-messages-for-rules.jar" />
         <fileset file="${artifacts.mps}/lib/mps-behavior-api.jar" />
         <fileset file="${artifacts.mps}/lib/mps-behavior-runtime.jar" />
         <fileset file="${artifacts.mps}/lib/mps-closures.jar" />
@@ -1310,7 +1314,6 @@
         <fileset file="${artifacts.mps}/lib/mps-references.jar" />
         <fileset file="${artifacts.mps}/lib/mps-messaging.jar" />
         <fileset file="${artifacts.mps}/lib/mps-boot-util.jar" />
-        <fileset file="${artifacts.mps}/lib/mps-constraints-runtime.jar" />
         <fileset file="${artifacts.mps}/lib/mps-editor.jar" />
         <fileset file="${artifacts.mps}/lib/mps-editor-api.jar" />
         <fileset file="${artifacts.mps}/lib/mps-editor-runtime.jar" />
@@ -1319,13 +1322,9 @@
         <fileset file="${artifacts.mps}/lib/mps-environment.jar" />
         <fileset file="${artifacts.mps}/lib/mps-project-check.jar" />
         <fileset file="${artifacts.mps}/lib/mps-textgen.jar" />
+        <pathelement path="${build.tmp}/java/out/org.iets3.core.expr.genjs.base" />
         <pathelement path="${build.tmp}/java/out/org.iets3.core.expr.genjs.base#01" />
-        <fileset file="${artifacts.mps}/lib/mps-problem.jar" />
-        <fileset file="${artifacts.mps}/lib/mps-feedback-api.jar" />
-        <fileset file="${artifacts.mps}/lib/mps-messages-api.jar" />
-        <fileset file="${artifacts.mps}/lib/mps-messages-for-rules.jar" />
         <pathelement path="${build.tmp}/java/out/org.iets3.core.expr.genjs.simpleTypes" />
-        <pathelement path="${build.tmp}/java/out/org.mar9000.mps.ecmascript.modules" />
         <fileset file="${artifacts.mps}/lib/annotations.jar" />
         <fileset dir="${artifacts.mps}/lib" includes="*.jar" />
         <fileset file="${artifacts.mps}/lib/log4j.jar" />
