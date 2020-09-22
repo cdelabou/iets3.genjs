@@ -183,9 +183,6 @@
     <copyModels todir="${build.tmp}/customProcessors/copyModels/languages-org.mar9000.mps.ecmascript.extended-models">
       <fileset dir="${basedir}/languages/org.mar9000.mps.ecmascript.extended/models" includes="**/*.mps, **/*.mpsr, **/.model" />
     </copyModels>
-    <copyModels todir="${build.tmp}/customProcessors/copyModels/languages-org.mar9000.mps.ecmascript.modules-generator-templates">
-      <fileset dir="${basedir}/languages/org.mar9000.mps.ecmascript.modules/generator/templates" includes="**/*.mps, **/*.mpsr, **/.model" />
-    </copyModels>
     <copyModels todir="${build.tmp}/customProcessors/copyModels/languages-org.mar9000.mps.ecmascript.extended-generator-templates">
       <fileset dir="${basedir}/languages/org.mar9000.mps.ecmascript.extended/generator/templates" includes="**/*.mps, **/*.mpsr, **/.model" />
     </copyModels>
@@ -204,7 +201,6 @@
       </fileset>
       <zipfileset file="${basedir}/languages/org.mar9000.mps.ecmascript.extended/org.mar9000.mps.ecmascript.extended.mpl" prefix="module" />
       <zipfileset dir="${build.tmp}/customProcessors/copyModels/languages-org.mar9000.mps.ecmascript.extended-models" prefix="module/models" />
-      <zipfileset dir="${build.tmp}/customProcessors/copyModels/languages-org.mar9000.mps.ecmascript.modules-generator-templates" prefix="module/generator/templates" />
       <zipfileset dir="${build.tmp}/customProcessors/copyModels/languages-org.mar9000.mps.ecmascript.extended-generator-templates" prefix="module/generator/templates" />
     </jar>
     <mkdir dir="${build.tmp}/default/org.iets3.core.expr.genjs.base.jar" />
@@ -819,9 +815,6 @@
     <copyModels todir="${build.tmp}/customProcessors/copyModels/languages-org.mar9000.mps.ecmascript.extended-models1">
       <fileset dir="${basedir}/languages/org.mar9000.mps.ecmascript.extended/models" includes="**/*.mps, **/*.mpsr, **/.model" />
     </copyModels>
-    <copyModels todir="${build.tmp}/customProcessors/copyModels/languages-org.mar9000.mps.ecmascript.modules-generator-templates1">
-      <fileset dir="${basedir}/languages/org.mar9000.mps.ecmascript.modules/generator/templates" includes="**/*.mps, **/*.mpsr, **/.model" />
-    </copyModels>
     <copyModels todir="${build.tmp}/customProcessors/copyModels/languages-org.mar9000.mps.ecmascript.extended-generator-templates1">
       <fileset dir="${basedir}/languages/org.mar9000.mps.ecmascript.extended/generator/templates" includes="**/*.mps, **/*.mpsr, **/.model" />
     </copyModels>
@@ -840,7 +833,6 @@
       </fileset>
       <zipfileset file="${basedir}/languages/org.mar9000.mps.ecmascript.extended/org.mar9000.mps.ecmascript.extended.mpl" prefix="module" />
       <zipfileset dir="${build.tmp}/customProcessors/copyModels/languages-org.mar9000.mps.ecmascript.extended-models1" prefix="module/models" />
-      <zipfileset dir="${build.tmp}/customProcessors/copyModels/languages-org.mar9000.mps.ecmascript.modules-generator-templates1" prefix="module/generator/templates" />
       <zipfileset dir="${build.tmp}/customProcessors/copyModels/languages-org.mar9000.mps.ecmascript.extended-generator-templates1" prefix="module/generator/templates" />
     </jar>
     <mkdir dir="${build.tmp}/default/org.iets3.core.expr.genjs.base.jar1" />

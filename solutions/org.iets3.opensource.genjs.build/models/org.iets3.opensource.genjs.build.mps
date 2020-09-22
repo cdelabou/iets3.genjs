@@ -326,25 +326,6 @@
             <property role="3ZfqAx" value="generator/templates" />
             <property role="1Hdu6h" value="true" />
             <property role="1HemKv" value="true" />
-            <node concept="3LXTmp" id="4vyBtkfxwrp" role="1HemKq">
-              <node concept="55IIr" id="4vyBtkfxwrj" role="3LXTmr">
-                <node concept="2Ry0Ak" id="4vyBtkfxwrk" role="iGT6I">
-                  <property role="2Ry0Am" value="languages" />
-                  <node concept="2Ry0Ak" id="4vyBtkfxwrl" role="2Ry0An">
-                    <property role="2Ry0Am" value="org.mar9000.mps.ecmascript.modules" />
-                    <node concept="2Ry0Ak" id="4vyBtkfxwrm" role="2Ry0An">
-                      <property role="2Ry0Am" value="generator" />
-                      <node concept="2Ry0Ak" id="4vyBtkfxwrn" role="2Ry0An">
-                        <property role="2Ry0Am" value="templates" />
-                      </node>
-                    </node>
-                  </node>
-                </node>
-              </node>
-              <node concept="3qWCbU" id="4vyBtkfxwrq" role="3LXTna">
-                <property role="3qWCbO" value="**/*.mps, **/*.mpsr, **/.model" />
-              </node>
-            </node>
             <node concept="3LXTmp" id="emEhcRP92k" role="1HemKq">
               <node concept="55IIr" id="emEhcRP92f" role="3LXTmr">
                 <node concept="2Ry0Ak" id="emEhcRP92g" role="iGT6I">
