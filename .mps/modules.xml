@@ -6,7 +6,7 @@
       <modulePath path="$PROJECT_DIR$/languages/org.iets3.core.expr.genjs.base/org.iets3.core.expr.genjs.base.mpl" folder="" />
       <modulePath path="$PROJECT_DIR$/languages/org.iets3.core.expr.genjs.simpleTypes/org.iets3.core.expr.genjs.simpleTypes.mpl" folder="" />
       <modulePath path="$PROJECT_DIR$/languages/org.iets3.core.expr.genjs.toplevel/org.iets3.core.expr.genjs.toplevel.mpl" folder="" />
-      <modulePath path="$PROJECT_DIR$/languages/org.mar9000.mps.ecmascript.modules/org.mar9000.mps.ecmascript.modules.mpl" folder="" />
+      <modulePath path="$PROJECT_DIR$/languages/org.mar9000.mps.ecmascript.extended/org.mar9000.mps.ecmascript.extended.mpl" folder="" />
       <modulePath path="$PROJECT_DIR$/solutions/org.iets3.core.expr.genjs.core.genplan/org.iets3.core.expr.genjs.core.genplan.msd" folder="" />
       <modulePath path="$PROJECT_DIR$/solutions/org.iets3.core.expr.genjs.core.test/org.iets3.core.expr.genjs.core.test.msd" folder="" />
       <modulePath path="$PROJECT_DIR$/solutions/org.iets3.opensource.genjs.build/org.iets3.opensource.genjs.build.msd" folder="" />

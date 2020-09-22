@@ -220,6 +220,10 @@
       </node>
     </node>
     <node concept="1l3spV" id="4vyBtkfxwr1" role="1l3spN">
+      <node concept="m$_wl" id="6Y0QzIEyAFH" role="39821P">
+        <ref role="m_rDy" node="4vyBtkfxwqO" resolve="iets3.opensource.genjs" />
+        <node concept="pUk6x" id="6Y0QzIEyAFI" role="pUk7w" />
+      </node>
       <node concept="3981dG" id="4vyBtkfxwr2" role="39821P">
         <node concept="3_J27D" id="4vyBtkfxwr3" role="Nbhlr">
           <node concept="3Mxwew" id="4vyBtkfxwr4" role="3MwsjC">
@@ -271,15 +275,15 @@
     <node concept="2G$12M" id="4vyBtkfxwqN" role="3989C9">
       <property role="TrG5h" value="iets3.opensource.genjs" />
       <node concept="1E1JtD" id="4vyBtkfxwqk" role="2G$12L">
-        <property role="TrG5h" value="org.mar9000.mps.ecmascript.modules" />
+        <property role="TrG5h" value="org.mar9000.mps.ecmascript.extended" />
         <property role="3LESm3" value="7c445dfe-2a01-4a0e-84bd-4d6b91c112c9" />
         <node concept="55IIr" id="4vyBtkfxwqf" role="3LF7KH">
           <node concept="2Ry0Ak" id="4vyBtkfxwqg" role="iGT6I">
             <property role="2Ry0Am" value="languages" />
             <node concept="2Ry0Ak" id="4vyBtkfxwqh" role="2Ry0An">
-              <property role="2Ry0Am" value="org.mar9000.mps.ecmascript.modules" />
-              <node concept="2Ry0Ak" id="4vyBtkfxwqi" role="2Ry0An">
-                <property role="2Ry0Am" value="org.mar9000.mps.ecmascript.modules.mpl" />
+              <property role="2Ry0Am" value="org.mar9000.mps.ecmascript.extended" />
+              <node concept="2Ry0Ak" id="emEhcROTab" role="2Ry0An">
+                <property role="2Ry0Am" value="org.mar9000.mps.ecmascript.extended.mpl" />
               </node>
             </node>
           </node>
@@ -303,7 +307,7 @@
               <node concept="2Ry0Ak" id="4vyBtkfxwrc" role="iGT6I">
                 <property role="2Ry0Am" value="languages" />
                 <node concept="2Ry0Ak" id="4vyBtkfxwrd" role="2Ry0An">
-                  <property role="2Ry0Am" value="org.mar9000.mps.ecmascript.modules" />
+                  <property role="2Ry0Am" value="org.mar9000.mps.ecmascript.extended" />
                   <node concept="2Ry0Ak" id="4vyBtkfxwre" role="2Ry0An">
                     <property role="2Ry0Am" value="models" />
                   </node>
@@ -316,7 +320,7 @@
           </node>
         </node>
         <node concept="1yeLz9" id="4vyBtkfxwri" role="1TViLv">
-          <property role="TrG5h" value="org.mar9000.mps.ecmascript.modules#01" />
+          <property role="TrG5h" value="org.mar9000.mps.ecmascript.extended#01" />
           <property role="3LESm3" value="e7e9a11a-1d49-4895-abe6-8a13397e030f" />
           <node concept="1BupzO" id="4vyBtkfxwro" role="3bR31x">
             <property role="3ZfqAx" value="generator/templates" />
@@ -341,6 +345,25 @@
                 <property role="3qWCbO" value="**/*.mps, **/*.mpsr, **/.model" />
               </node>
             </node>
+            <node concept="3LXTmp" id="emEhcRP92k" role="1HemKq">
+              <node concept="55IIr" id="emEhcRP92f" role="3LXTmr">
+                <node concept="2Ry0Ak" id="emEhcRP92g" role="iGT6I">
+                  <property role="2Ry0Am" value="languages" />
+                  <node concept="2Ry0Ak" id="emEhcRP92h" role="2Ry0An">
+                    <property role="2Ry0Am" value="org.mar9000.mps.ecmascript.extended" />
+                    <node concept="2Ry0Ak" id="emEhcRP92i" role="2Ry0An">
+                      <property role="2Ry0Am" value="generator" />
+                      <node concept="2Ry0Ak" id="emEhcRP92j" role="2Ry0An">
+                        <property role="2Ry0Am" value="templates" />
+                      </node>
+                    </node>
+                  </node>
+                </node>
+              </node>
+              <node concept="3qWCbU" id="emEhcRP92l" role="3LXTna">
+                <property role="3qWCbO" value="**/*.mps, **/*.mpsr, **/.model" />
+              </node>
+            </node>
           </node>
         </node>
         <node concept="1SiIV0" id="4vyBtkfymF_" role="3bR37C">
@@ -351,6 +374,11 @@
         <node concept="1SiIV0" id="4vyBtkfymFF" role="3bR37C">
           <node concept="1Busua" id="4vyBtkfymFG" role="1SiIV1">
             <ref role="1Busuk" to="9xne:1KcYDCsMlez" resolve="org.mar9000.mps.ecmascript" />
+          </node>
+        </node>
+        <node concept="1SiIV0" id="emEhcRP929" role="3bR37C">
+          <node concept="3bR9La" id="emEhcRP92a" role="1SiIV1">
+            <ref role="3bR37D" to="ffeo:1H905DlDUSw" resolve="MPS.OpenAPI" />
           </node>
         </node>
       </node>
@@ -690,6 +718,12 @@
         </node>
         <node concept="3LEDTM" id="4vyBtkfxwxx" role="3LEDUa">
           <ref role="3LEDTN" node="4vyBtkfxwqM" resolve="org.iets3.core.expr.genjs.core.genplan" />
+        </node>
+        <node concept="3LEDTy" id="emEhcRP92L" role="3LEDUa">
+          <ref role="3LEDTV" to="9xne:1KcYDCsMlez" resolve="org.mar9000.mps.ecmascript" />
+        </node>
+        <node concept="3LEDTy" id="emEhcRP92M" role="3LEDUa">
+          <ref role="3LEDTV" node="4vyBtkfxwqk" resolve="org.mar9000.mps.ecmascript.extended" />
         </node>
       </node>
       <node concept="1E1JtA" id="4vyBtkfxwqM" role="2G$12L">

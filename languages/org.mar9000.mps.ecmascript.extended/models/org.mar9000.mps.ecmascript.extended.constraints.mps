@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<model ref="r:21182cfe-761f-4754-839b-b3c186eead2f(org.mar9000.mps.ecmascript.modules.constraints)">
+<model ref="r:21182cfe-761f-4754-839b-b3c186eead2f(org.mar9000.mps.ecmascript.extended.constraints)">
   <persistence version="9" />
   <languages>
     <use id="5dae8159-ab99-46bb-a40d-0cee30ee7018" name="jetbrains.mps.lang.constraints.rules.kinds" version="0" />
