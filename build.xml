@@ -57,6 +57,7 @@
         <version>1.0</version>
         <depends>jetbrains.mps.core</depends>
         <depends>org.iets3.core.os</depends>
+        <depends>org.iets3.build.os</depends>
         <depends>ecmascript4mps</depends>
         <depends>com.intellij.modules.platform</depends>
         
@@ -679,6 +680,45 @@
       <zipfileset file="${basedir}/solutions/org.iets3.core.expr.genjs.core.genplan/org.iets3.core.expr.genjs.core.genplan.msd" prefix="module" />
       <zipfileset dir="${build.tmp}/customProcessors/copyModels/solutions-org.iets3.core.expr.genjs.core.genplan-models" prefix="module/models" />
     </jar>
+    <mkdir dir="${build.tmp}/default/org.iets3.opensource.genjs.build.jar" />
+    <mkdir dir="${build.tmp}/default/org.iets3.opensource.genjs.build.jar/META-INF" />
+    <echoxml file="${build.tmp}/default/org.iets3.opensource.genjs.build.jar/META-INF/module.xml">
+      <module namespace="org.iets3.opensource.genjs.build" type="solution" uuid="082b5bc5-82e3-443e-a9f5-4147fc9ab43b">
+        <dependencies>
+          <module ref="3ae9cfda-f938-4524-b4ca-fbcba3b0525b(com.mbeddr.platform)" kind="cl" />
+          <module ref="f1fb7b1c-ce0d-423c-9369-4a661d600029(de.itemis.mps.extensions.build)" kind="cl" />
+          <module ref="422c2909-59d6-41a9-b318-40e6256b250f(jetbrains.mps.ide.build)" kind="cl" />
+          <module ref="31dfb853-8304-435d-b27c-e29ef9a627cf(org.iets3.opensource.build)" kind="cl" />
+          <module ref="22ffb846-45b3-4ef5-a9f4-a67794b30a86(org.mar9000.mps.ecmascript.build)" kind="cl" />
+        </dependencies>
+        <uses>
+          <language id="l:798100da-4f0a-421a-b991-71f8c50ce5d2:jetbrains.mps.build" />
+          <language id="l:0cf935df-4699-4e9c-a132-fa109541cba3:jetbrains.mps.build.mps" />
+        </uses>
+        <classpath>
+          <entry path="." />
+        </classpath>
+        <sources jar="org.iets3.opensource.genjs.build-src.jar" descriptor="org.iets3.opensource.genjs.build.msd" />
+      </module>
+    </echoxml>
+    <jar destfile="${build.layout}/iets3.opensource.genjs/languages/iets3.opensource.genjs/org.iets3.opensource.genjs.build.jar" duplicate="preserve">
+      <fileset dir="${build.tmp}/java/out/org.iets3.opensource.genjs.build" />
+      <fileset dir="${basedir}/solutions/org.iets3.opensource.genjs.build/source_gen" includes="**/trace.info, **/exports, **/*.mps, **/checkpoints" />
+      <fileset dir="${build.tmp}/default/org.iets3.opensource.genjs.build.jar" />
+    </jar>
+    <copyModels todir="${build.tmp}/customProcessors/copyModels/solutions-org.iets3.opensource.genjs.build-models">
+      <fileset dir="${basedir}/solutions/org.iets3.opensource.genjs.build/models" includes="**/*.mps, **/*.mpsr, **/.model" />
+    </copyModels>
+    <jar destfile="${build.layout}/iets3.opensource.genjs/languages/iets3.opensource.genjs/org.iets3.opensource.genjs.build-src.jar" duplicate="preserve">
+      <fileset dir="${basedir}/solutions/org.iets3.opensource.genjs.build/source_gen">
+        <exclude name="**/trace.info" />
+        <exclude name="**/exports" />
+        <exclude name="**/checkpoints" />
+        <exclude name="**/*.mps" />
+      </fileset>
+      <zipfileset file="${basedir}/solutions/org.iets3.opensource.genjs.build/org.iets3.opensource.genjs.build.msd" prefix="module" />
+      <zipfileset dir="${build.tmp}/customProcessors/copyModels/solutions-org.iets3.opensource.genjs.build-models" prefix="module/models" />
+    </jar>
     <mkdir dir="${build.tmp}/default/iets3.opensource.genjs.zip" />
     <mkdir dir="${build.tmp}/default/iets3.opensource.genjs.zip/iets3.opensource.genjs" />
     <mkdir dir="${build.tmp}/default/iets3.opensource.genjs.zip/iets3.opensource.genjs/META-INF" />
@@ -689,6 +729,7 @@
         <version>1.0</version>
         <depends>jetbrains.mps.core</depends>
         <depends>org.iets3.core.os</depends>
+        <depends>org.iets3.build.os</depends>
         <depends>ecmascript4mps</depends>
         <depends>com.intellij.modules.platform</depends>
         
@@ -1311,6 +1352,45 @@
       <zipfileset file="${basedir}/solutions/org.iets3.core.expr.genjs.core.genplan/org.iets3.core.expr.genjs.core.genplan.msd" prefix="module" />
       <zipfileset dir="${build.tmp}/customProcessors/copyModels/solutions-org.iets3.core.expr.genjs.core.genplan-models1" prefix="module/models" />
     </jar>
+    <mkdir dir="${build.tmp}/default/org.iets3.opensource.genjs.build.jar1" />
+    <mkdir dir="${build.tmp}/default/org.iets3.opensource.genjs.build.jar1/META-INF" />
+    <echoxml file="${build.tmp}/default/org.iets3.opensource.genjs.build.jar1/META-INF/module.xml">
+      <module namespace="org.iets3.opensource.genjs.build" type="solution" uuid="082b5bc5-82e3-443e-a9f5-4147fc9ab43b">
+        <dependencies>
+          <module ref="3ae9cfda-f938-4524-b4ca-fbcba3b0525b(com.mbeddr.platform)" kind="cl" />
+          <module ref="f1fb7b1c-ce0d-423c-9369-4a661d600029(de.itemis.mps.extensions.build)" kind="cl" />
+          <module ref="422c2909-59d6-41a9-b318-40e6256b250f(jetbrains.mps.ide.build)" kind="cl" />
+          <module ref="31dfb853-8304-435d-b27c-e29ef9a627cf(org.iets3.opensource.build)" kind="cl" />
+          <module ref="22ffb846-45b3-4ef5-a9f4-a67794b30a86(org.mar9000.mps.ecmascript.build)" kind="cl" />
+        </dependencies>
+        <uses>
+          <language id="l:798100da-4f0a-421a-b991-71f8c50ce5d2:jetbrains.mps.build" />
+          <language id="l:0cf935df-4699-4e9c-a132-fa109541cba3:jetbrains.mps.build.mps" />
+        </uses>
+        <classpath>
+          <entry path="." />
+        </classpath>
+        <sources jar="org.iets3.opensource.genjs.build-src.jar" descriptor="org.iets3.opensource.genjs.build.msd" />
+      </module>
+    </echoxml>
+    <jar destfile="${build.tmp}/default/iets3.opensource.genjs.zip/iets3.opensource.genjs/languages/iets3.opensource.genjs/org.iets3.opensource.genjs.build.jar" duplicate="preserve">
+      <fileset dir="${build.tmp}/java/out/org.iets3.opensource.genjs.build" />
+      <fileset dir="${basedir}/solutions/org.iets3.opensource.genjs.build/source_gen" includes="**/trace.info, **/exports, **/*.mps, **/checkpoints" />
+      <fileset dir="${build.tmp}/default/org.iets3.opensource.genjs.build.jar1" />
+    </jar>
+    <copyModels todir="${build.tmp}/customProcessors/copyModels/solutions-org.iets3.opensource.genjs.build-models1">
+      <fileset dir="${basedir}/solutions/org.iets3.opensource.genjs.build/models" includes="**/*.mps, **/*.mpsr, **/.model" />
+    </copyModels>
+    <jar destfile="${build.tmp}/default/iets3.opensource.genjs.zip/iets3.opensource.genjs/languages/iets3.opensource.genjs/org.iets3.opensource.genjs.build-src.jar" duplicate="preserve">
+      <fileset dir="${basedir}/solutions/org.iets3.opensource.genjs.build/source_gen">
+        <exclude name="**/trace.info" />
+        <exclude name="**/exports" />
+        <exclude name="**/checkpoints" />
+        <exclude name="**/*.mps" />
+      </fileset>
+      <zipfileset file="${basedir}/solutions/org.iets3.opensource.genjs.build/org.iets3.opensource.genjs.build.msd" prefix="module" />
+      <zipfileset dir="${build.tmp}/customProcessors/copyModels/solutions-org.iets3.opensource.genjs.build-models1" prefix="module/models" />
+    </jar>
     <zip destfile="${build.layout}/iets3.opensource.genjs.zip">
       <fileset dir="${build.tmp}/default/iets3.opensource.genjs.zip" />
     </zip>
@@ -1328,7 +1408,7 @@
     <delete dir="${build.layout}" />
   </target>
   
-  <target name="compileJava" depends="java.compile.org.mar9000.mps.ecmascript.extended, java.compile.org.mar9000.mps.ecmascript.extended#01, java.compile.org.iets3.core.expr.genjs.base, java.compile.org.iets3.core.expr.genjs.base#01, java.compile.org.iets3.core.expr.genjs.simpleTypes, java.compile.org.iets3.core.expr.genjs.simpleTypes#01, java.compile.org.iets3.core.expr.genjs.toplevel, java.compile.org.iets3.core.expr.genjs.toplevel#01, java.compile.org.iets3.core.expr.genjs.core.genplan" />
+  <target name="compileJava" depends="java.compile.org.mar9000.mps.ecmascript.extended, java.compile.org.mar9000.mps.ecmascript.extended#01, java.compile.org.iets3.core.expr.genjs.base, java.compile.org.iets3.core.expr.genjs.base#01, java.compile.org.iets3.core.expr.genjs.simpleTypes, java.compile.org.iets3.core.expr.genjs.simpleTypes#01, java.compile.org.iets3.core.expr.genjs.toplevel, java.compile.org.iets3.core.expr.genjs.toplevel#01, java.compile.org.iets3.core.expr.genjs.core.genplan, java.compile.org.iets3.opensource.genjs.build" />
   
   <target name="processResources" />
   
@@ -1354,12 +1434,14 @@
       <plugin path="${artifacts.com.mbeddr.platform}/com.mbeddr.mpsutil.suppresswarning" />
       <plugin path="${artifacts.com.mbeddr.platform}/com.mbeddr.mpsutil.treenotations" />
       <plugin path="${artifacts.com.mbeddr.platform}/com.mbeddr.mpsutil.varscope" />
+      <plugin path="${artifacts.com.mbeddr.platform}/com.mbeddr.platform.build" />
       <plugin path="${artifacts.com.mbeddr.platform}/de-itemis-mps-selection" />
       <plugin path="${artifacts.com.mbeddr.platform}/de.60.mps.libs" />
       <plugin path="${artifacts.com.mbeddr.platform}/de.itemis.mps.blutil" />
       <plugin path="${artifacts.com.mbeddr.platform}/de.itemis.mps.celllayout" />
       <plugin path="${artifacts.com.mbeddr.platform}/de.itemis.mps.editor.diagram" />
       <plugin path="${artifacts.com.mbeddr.platform}/de.itemis.mps.editor.widgets" />
+      <plugin path="${artifacts.com.mbeddr.platform}/de.itemis.mps.extensions.build" />
       <plugin path="${artifacts.com.mbeddr.platform}/de.itemis.mps.tooltips" />
       <plugin path="${artifacts.com.mbeddr.platform}/de.itemis.mps.utils" />
       <plugin path="${artifacts.com.mbeddr.platform}/de.slisson.mps.conditionalEditor" />
@@ -1377,6 +1459,7 @@
       <plugin path="${artifacts.mps}/plugins/mps-httpsupport" />
       <plugin path="${artifacts.mps}/plugins/mps-testing" />
       <plugin path="${artifacts.mps}/plugins/mps-tooltips" />
+      <plugin path="${artifacts.org.iets3.opensource}/org.iets3.build.os" />
       <plugin path="${artifacts.org.iets3.opensource}/org.iets3.core.os" />
       <library file="${artifacts.com.mbeddr.platform}/com.mbeddr.mpsutil.common/languages/group.common/com.mbeddr.mpsutil.common.jar" />
       <library file="${artifacts.com.mbeddr.platform}/com.mbeddr.mpsutil.contextactions/languages/group.contextactions/com.mbeddr.mpsutil.contextactions.runtime.jar" />
@@ -1390,10 +1473,12 @@
       <library file="${artifacts.com.mbeddr.platform}/com.mbeddr.mpsutil.suppresswarning/languages/group.suppresswarning/com.mbeddr.mpsutil.suppresswarning.jar" />
       <library file="${artifacts.com.mbeddr.platform}/com.mbeddr.mpsutil.varscope/languages/group.varscope/com.mbeddr.mpsutil.varscope.jar" />
       <library file="${artifacts.com.mbeddr.platform}/com.mbeddr.mpsutil.varscope/languages/group.varscope/com.mbeddr.mpsutil.varscope.runtime.jar" />
+      <library file="${artifacts.com.mbeddr.platform}/com.mbeddr.platform.jar" />
       <library file="${artifacts.com.mbeddr.platform}/de-itemis-mps-selection/languages/de.itemis.mps.selection/de.itemis.mps.selection.runtime.jar" />
       <library file="${artifacts.com.mbeddr.platform}/de.itemis.mps.blutil/languages/de.itemis.mps.blutil/com.mbeddr.mpsutil.blutil.jar" />
       <library file="${artifacts.com.mbeddr.platform}/de.itemis.mps.celllayout/languages/de.itemis.mps.celllayout/de.itemis.mps.editor.celllayout.runtime.jar" />
       <library file="${artifacts.com.mbeddr.platform}/de.itemis.mps.celllayout/languages/de.itemis.mps.celllayout/de.itemis.mps.editor.celllayout.styles.jar" />
+      <library file="${artifacts.com.mbeddr.platform}/de.itemis.mps.extensions.build/languages/de.itemis.mps.extensions.build/de.itemis.mps.extensions.build.jar" />
       <library file="${artifacts.com.mbeddr.platform}/de.itemis.mps.utils/languages/de.itemis.mps.utils/com.mbeddr.mpsutil.serializer.xml.jar" />
       <library file="${artifacts.com.mbeddr.platform}/de.slisson.mps.hacks/languages/de.slisson.mps.hacks/de.slisson.mps.hacks.editor.jar" />
       <library file="${artifacts.com.mbeddr.platform}/de.slisson.mps.hacks/languages/de.slisson.mps.hacks/de.slisson.mps.reflection.runtime.jar" />
@@ -1401,6 +1486,7 @@
       <library file="${artifacts.com.mbeddr.platform}/mps-apache-commons/languages/mps-apache-commons-math/org.apache.commons.jar" />
       <library file="${artifacts.com.mbeddr.platform}/mps-multiline/languages/mps-multiline/de.slisson.mps.editor.multiline.runtime.jar" />
       <library file="${artifacts.com.mbeddr.platform}/mps-richtext/languages/mps-richtext/de.slisson.mps.richtext.jar" />
+      <library file="${artifacts.ecmascript4mps}/ecmascript4mps/languages/ecmascript4mps/org.mar9000.mps.ecmascript.build.jar" />
       <library file="${artifacts.ecmascript4mps}/ecmascript4mps/languages/ecmascript4mps/org.mar9000.mps.ecmascript.jar" />
       <library file="${artifacts.mps}/languages/baseLanguage/closures.runtime.jar" />
       <library file="${artifacts.mps}/languages/baseLanguage/collections.runtime.jar" />
@@ -1518,15 +1604,22 @@
       <library file="${artifacts.mps}/languages/tools/jetbrains.mps.tool.common.jar" />
       <library file="${artifacts.mps}/languages/util/jetbrains.mps.java.stub.jar" />
       <library file="${artifacts.mps}/languages/util/jetbrains.mps.kernel.jar" />
+      <library file="${artifacts.mps}/languages/util/jetbrains.mps.lang.makeup.jar" />
       <library file="${artifacts.mps}/languages/util/jetbrains.mps.project.jar" />
       <library file="${artifacts.mps}/languages/util/jetbrains.mps.refactoring.jar" />
       <library file="${artifacts.mps}/languages/util/jetbrains.mps.runtime.jar" />
       <library file="${artifacts.mps}/languages/workbench-stub.jar" />
       <library file="${artifacts.mps}/languages/workbench/jetbrains.mps.ide.jar" />
       <library file="${artifacts.mps}/languages/xml/jetbrains.mps.core.xml.jar" />
+      <library file="${artifacts.mps}/plugins/mps-build/languages/build/jetbrains.mps.build.jar" />
+      <library file="${artifacts.mps}/plugins/mps-build/languages/build/jetbrains.mps.build.mps.jar" />
+      <library file="${artifacts.mps}/plugins/mps-build/languages/build/jetbrains.mps.build.workflow.jar" />
+      <library file="${artifacts.mps}/plugins/mps-build/languages/build/jetbrains.mps.build.workflow.preset.jar" />
+      <library file="${artifacts.mps}/plugins/mps-build/languages/build/jetbrains.mps.ide.build.jar" />
       <library file="${artifacts.mps}/plugins/mps-httpsupport/languages/jetbrains.mps.ide.httpsupport.jar" />
       <library file="${artifacts.mps}/plugins/mps-httpsupport/lib/httpsupport.jar" />
       <library file="${artifacts.mps}/plugins/mps-httpsupport/solutions/jetbrains.mps.ide.httpsupport.runtime.jar" />
+      <library file="${artifacts.org.iets3.opensource}/org.iets3.build.os/languages/iets3.build/org.iets3.opensource.build.jar" />
       <library file="${artifacts.org.iets3.opensource}/org.iets3.core.os/languages/iets3.core.os/org.iets3.analysis.base.jar" />
       <library file="${artifacts.org.iets3.opensource}/org.iets3.core.os/languages/iets3.core.os/org.iets3.core.base.jar" />
       <library file="${artifacts.org.iets3.opensource}/org.iets3.core.os/languages/iets3.core.os/org.iets3.core.expr.base.jar" />
@@ -1544,6 +1637,7 @@
         <module file="${basedir}/solutions/org.iets3.core.expr.genjs.core.genplan/org.iets3.core.expr.genjs.core.genplan.msd" />
         <module file="${basedir}/languages/org.iets3.core.expr.genjs.simpleTypes/org.iets3.core.expr.genjs.simpleTypes.mpl" />
         <module file="${basedir}/languages/org.iets3.core.expr.genjs.toplevel/org.iets3.core.expr.genjs.toplevel.mpl" />
+        <module file="${basedir}/solutions/org.iets3.opensource.genjs.build/org.iets3.opensource.genjs.build.msd" />
         <module file="${basedir}/languages/org.mar9000.mps.ecmascript.extended/org.mar9000.mps.ecmascript.extended.mpl" />
       </chunk>
       <chunk />
@@ -2193,11 +2287,29 @@
     </javac>
   </target>
   
+  <target name="java.compile.org.iets3.opensource.genjs.build" depends="fetchDependencies">
+    <mkdir dir="${basedir}/solutions/org.iets3.opensource.genjs.build/source_gen" />
+    <mkdir dir="${build.tmp}/java/out/org.iets3.opensource.genjs.build" />
+    <javac destdir="${build.tmp}/java/out/org.iets3.opensource.genjs.build" fork="true" encoding="utf8" includeantruntime="false" debug="true">
+      <compilerarg value="-Xlint:none" />
+      <src>
+        <path location="${basedir}/solutions/org.iets3.opensource.genjs.build/source_gen" />
+      </src>
+      <classpath>
+        <fileset file="${artifacts.com.mbeddr.platform}/com.mbeddr.platform.jar" />
+        <fileset file="${artifacts.com.mbeddr.platform}/de.itemis.mps.extensions.build/languages/de.itemis.mps.extensions.build/de.itemis.mps.extensions.build.jar" />
+        <fileset file="${artifacts.org.iets3.opensource}/org.iets3.build.os/languages/iets3.build/org.iets3.opensource.build.jar" />
+        <fileset file="${artifacts.ecmascript4mps}/ecmascript4mps/languages/ecmascript4mps/org.mar9000.mps.ecmascript.build.jar" />
+      </classpath>
+    </javac>
+  </target>
+  
   <target name="cleanSources">
     <delete dir="${basedir}/languages/org.iets3.core.expr.genjs.base/source_gen" />
     <delete dir="${basedir}/solutions/org.iets3.core.expr.genjs.core.genplan/source_gen" />
     <delete dir="${basedir}/languages/org.iets3.core.expr.genjs.simpleTypes/source_gen" />
     <delete dir="${basedir}/languages/org.iets3.core.expr.genjs.toplevel/source_gen" />
+    <delete dir="${basedir}/solutions/org.iets3.opensource.genjs.build/source_gen" />
     <delete dir="${basedir}/languages/org.mar9000.mps.ecmascript.extended/source_gen" />
     <delete dir="${basedir}/languages/org.mar9000.mps.ecmascript.extended/generator/source_gen" />
     <delete dir="${basedir}/languages/org.iets3.core.expr.genjs.base/generator/source_gen" />

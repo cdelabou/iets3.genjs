@@ -10,6 +10,7 @@
     <import index="ip48" ref="r:c3d6ae0c-8b10-477f-a3e9-5dc8700ceb13(org.iets3.opensource.build.build)" />
     <import index="9xne" ref="r:0ba516ca-9d2d-41e9-b788-a2272dd7679e(org.mar9000.mps.ecmascript.build)" />
     <import index="al5i" ref="r:742f344d-4dc4-4862-992c-4bc94b094870(com.mbeddr.mpsutil.dev.build)" />
+    <import index="90a9" ref="r:fb24ac52-5985-4947-bba9-25be6fd32c1a(de.itemis.mps.extensions.build)" implicit="true" />
   </imports>
   <registry>
     <language id="479c7a8c-02f9-43b5-9139-d910cb22f298" name="jetbrains.mps.core.xml">
@@ -254,6 +255,9 @@
       <node concept="m$_yC" id="4vyBtkfymEx" role="m$_yJ">
         <ref role="m$_y1" to="ip48:5wLtKNeSRRD" resolve="org.iets3.core.os" />
       </node>
+      <node concept="m$_yC" id="7QIsDWeKvpW" role="m$_yJ">
+        <ref role="m$_y1" to="ip48:64GCIgM55Fn" resolve="org.iets3.build.os" />
+      </node>
       <node concept="m$_yC" id="4vyBtkfymEZ" role="m$_yJ">
         <ref role="m$_y1" to="9xne:1KcYDCsMleH" resolve="ecmascript4mps" />
       </node>
@@ -277,6 +281,7 @@
       <node concept="1E1JtD" id="4vyBtkfxwqk" role="2G$12L">
         <property role="TrG5h" value="org.mar9000.mps.ecmascript.extended" />
         <property role="3LESm3" value="7c445dfe-2a01-4a0e-84bd-4d6b91c112c9" />
+        <property role="BnDLt" value="true" />
         <node concept="55IIr" id="4vyBtkfxwqf" role="3LF7KH">
           <node concept="2Ry0Ak" id="4vyBtkfxwqg" role="iGT6I">
             <property role="2Ry0Am" value="languages" />
@@ -700,11 +705,11 @@
         <node concept="3LEDTM" id="4vyBtkfxwxx" role="3LEDUa">
           <ref role="3LEDTN" node="4vyBtkfxwqM" resolve="org.iets3.core.expr.genjs.core.genplan" />
         </node>
-        <node concept="3LEDTy" id="emEhcRP92L" role="3LEDUa">
-          <ref role="3LEDTV" to="9xne:1KcYDCsMlez" resolve="org.mar9000.mps.ecmascript" />
-        </node>
-        <node concept="3LEDTy" id="emEhcRP92M" role="3LEDUa">
+        <node concept="3LEDTy" id="7QIsDWeKvs6" role="3LEDUa">
           <ref role="3LEDTV" node="4vyBtkfxwqk" resolve="org.mar9000.mps.ecmascript.extended" />
+        </node>
+        <node concept="3LEDTy" id="7QIsDWeKvs7" role="3LEDUa">
+          <ref role="3LEDTV" to="9xne:1KcYDCsMlez" resolve="org.mar9000.mps.ecmascript" />
         </node>
       </node>
       <node concept="1E1JtA" id="4vyBtkfxwqM" role="2G$12L">
@@ -741,6 +746,68 @@
             <node concept="3qWCbU" id="4vyBtkfxwsh" role="3LXTna">
               <property role="3qWCbO" value="**/*.mps, **/*.mpsr, **/.model" />
             </node>
+          </node>
+        </node>
+      </node>
+      <node concept="1E1JtA" id="7QIsDWeK2W2" role="2G$12L">
+        <property role="TrG5h" value="org.iets3.opensource.genjs.build" />
+        <property role="3LESm3" value="082b5bc5-82e3-443e-a9f5-4147fc9ab43b" />
+        <property role="BnDLt" value="true" />
+        <node concept="55IIr" id="7QIsDWeK2W5" role="3LF7KH">
+          <node concept="2Ry0Ak" id="7QIsDWeK2Za" role="iGT6I">
+            <property role="2Ry0Am" value="solutions" />
+            <node concept="2Ry0Ak" id="7QIsDWeK2Zf" role="2Ry0An">
+              <property role="2Ry0Am" value="org.iets3.opensource.genjs.build" />
+              <node concept="2Ry0Ak" id="7QIsDWeK2Zk" role="2Ry0An">
+                <property role="2Ry0Am" value="org.iets3.opensource.genjs.build.msd" />
+              </node>
+            </node>
+          </node>
+        </node>
+        <node concept="1SiIV0" id="7QIsDWeK2ZY" role="3bR37C">
+          <node concept="3bR9La" id="7QIsDWeK2ZZ" role="1SiIV1">
+            <ref role="3bR37D" to="9xne:FNyxEXk8Ej" resolve="org.mar9000.mps.ecmascript.build" />
+          </node>
+        </node>
+        <node concept="1SiIV0" id="7QIsDWeK300" role="3bR37C">
+          <node concept="3bR9La" id="7QIsDWeK301" role="1SiIV1">
+            <ref role="3bR37D" to="ip48:7C6tnXfWu6n" resolve="org.iets3.opensource.build" />
+          </node>
+        </node>
+        <node concept="1SiIV0" id="7QIsDWeK302" role="3bR37C">
+          <node concept="3bR9La" id="7QIsDWeK303" role="1SiIV1">
+            <ref role="3bR37D" to="ffeo:78GwwOvB3tw" resolve="jetbrains.mps.ide.build" />
+          </node>
+        </node>
+        <node concept="1SiIV0" id="7QIsDWeK304" role="3bR37C">
+          <node concept="3bR9La" id="7QIsDWeK305" role="1SiIV1">
+            <ref role="3bR37D" to="al5i:7Pr7tifzlku" resolve="com.mbeddr.platform" />
+          </node>
+        </node>
+        <node concept="1BupzO" id="7QIsDWeK30a" role="3bR31x">
+          <property role="3ZfqAx" value="models" />
+          <property role="1Hdu6h" value="true" />
+          <property role="1HemKv" value="true" />
+          <node concept="3LXTmp" id="7QIsDWeK30b" role="1HemKq">
+            <node concept="55IIr" id="7QIsDWeK306" role="3LXTmr">
+              <node concept="2Ry0Ak" id="7QIsDWeK307" role="iGT6I">
+                <property role="2Ry0Am" value="solutions" />
+                <node concept="2Ry0Ak" id="7QIsDWeK308" role="2Ry0An">
+                  <property role="2Ry0Am" value="org.iets3.opensource.genjs.build" />
+                  <node concept="2Ry0Ak" id="7QIsDWeK309" role="2Ry0An">
+                    <property role="2Ry0Am" value="models" />
+                  </node>
+                </node>
+              </node>
+            </node>
+            <node concept="3qWCbU" id="7QIsDWeK30c" role="3LXTna">
+              <property role="3qWCbO" value="**/*.mps, **/*.mpsr, **/.model" />
+            </node>
+          </node>
+        </node>
+        <node concept="1SiIV0" id="7QIsDWeKvoC" role="3bR37C">
+          <node concept="3bR9La" id="7QIsDWeKvoD" role="1SiIV1">
+            <ref role="3bR37D" to="90a9:PE3B26VOkn" resolve="de.itemis.mps.extensions.build" />
           </node>
         </node>
       </node>
