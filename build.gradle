@@ -121,6 +121,7 @@ task buildLanguage(type: BuildLanguages, dependsOn: [buildEcmascript, buildOpenS
 task generateLibrariesXml(type: GenerateLibrariesXml) {
     description "Will read project libraries from projectlibraries.properties and generate libraries.xml in .mps directory. Libraries are loaded in mps during start."
     defaults rootProject.file('projectlibraries.properties')
+	overrides rootProject.file('projectlibraries.overrides.properties')
     destination file('.mps/libraries.xml')
 }
 

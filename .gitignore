@@ -5,8 +5,7 @@ classes_gen
 classes_gen.caches
 
 # IETS3 & ecmascript
-dependencies/iets3.opensource
-dependencies/ecmascript4mps
+dependencies
 
 # Ignore Gradle project-specific cache directory
 .gradle
