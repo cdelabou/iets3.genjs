@@ -20,7 +20,6 @@ ext.mpsVersion = project.hasProperty("mpsVersion") ? project.property('mpsVersio
 
 // Optional properties
 def mpsDir = project.hasProperty("mpsDir") ? project.property('mpsDir') : "$buildDir/mps"
-def iets3OpenSourceVersion = project.hasProperty("iets3OpenSourceVersion") ? project.property('iets3OpenSourceVersion') : "$mpsVersion-SNAPSHOT"
 
 configurations {
     mps
@@ -30,7 +29,7 @@ configurations {
 
 dependencies {
     mps "com.jetbrains:mps:$mpsVersion"
-	mpsArtifacts "org.iets3:opensource:$iets3OpenSourceVersion"
+	mpsArtifacts "org.iets3:opensource:$mpsVersion.+"
     junitAnt 'org.apache.ant:ant-junit:1.10.9'
 }
 
@@ -50,7 +49,6 @@ import de.itemis.mps.gradle.*
 def jdkHome = System.getProperty('java.home')
 
 // Location of the dependencies (if cloned)
-def iets3home = "$buildDir/dependencies/iets3.opensource"
 def ecmascriptHome = "$buildDir/dependencies/ecmascript4mps"
 
 ext.artifactsDir = file("$rootDir/artifacts")
@@ -72,7 +70,7 @@ resolveMps.onlyIf { !project.hasProperty("mpsDir") }
 
 
 
-version = "1.0"
+version = "$mpsVersion-SNAPSHOT"
 
 // Args to the builds scripts, contains both home and artifacts directory 
 def defaultScriptArgs = [
@@ -80,7 +78,6 @@ def defaultScriptArgs = [
 
     // Projects folders
     'ecmascript4mps.home'               : ecmascriptHome,
-    'iets3.github.opensource.home'      : iets3home,
 	'iets3.github.opensource.genjs.home': rootDir,
 
     // Generated artifacts
@@ -97,26 +94,6 @@ def defaultScriptArgs = [
 ext["itemis.mps.gradle.ant.defaultScriptArgs"] = defaultScriptArgs.collect { "-D$it.key=$it.value".toString() }
 ext["itemis.mps.gradle.ant.defaultScriptClasspath"] = buildScriptClasspath
 ext["itemis.mps.gradle.ant.defaultJavaExecutable"] = file("$jdkHome/bin/java")
-
-task cloneOpenSource {
-	description "clone kernelF repository"
-	doLast {
-		try {
-			Grgit.open(dir: iets3home)
-			println "iets3.opensource exists, assuming clone to be done"
-		} catch (Exception e) {
-			def grgit = Grgit.clone(dir: iets3home, uri: "https://github.com/IETS3/iets3.opensource.git")
-			println grgit.describe()
-		}
-	}
-}
-
-task buildOpenSource(type: GradleBuild, dependsOn: [cloneOpenSource, resolveMps]) {
-	description "build kernelF from source"
-	dir = file(iets3home)
-	startParameter.projectProperties = [iets3OpenSourceVersion: iets3OpenSourceVersion]
-    tasks = ['packageLanguages', 'publishToMavenLocal']
-}
 
 task cloneEcmascript {
 	doLast {
