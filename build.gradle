@@ -70,12 +70,6 @@ task resolveMps(type: Copy) {
 }
 resolveMps.onlyIf { !project.hasProperty("mpsDir") }
 
-task resolveArtifacts(type: Copy) {
-    from {
-        configurations.mpsArtifacts.resolve().collect { zipTree(it) }
-    }
-    into artifactsDir
-}
 
 
 version = "1.0"
@@ -145,6 +139,13 @@ task buildEcmascript(type: BuildLanguages, dependsOn: [cloneEcmascript, resolveM
 	script "$ecmascriptHome/build.xml"
 }
 
+task resolveArtifacts(type: Copy, dependsOn: [buildEcmascript]) {
+    from {
+        configurations.mpsArtifacts.resolve().collect { zipTree(it) }
+    }
+    into artifactsDir
+}
+
 task buildLanguage(type: BuildLanguages, dependsOn: [buildEcmascript, resolveMps, resolveArtifacts]) {
 	script "$rootDir/build.xml"
 }
@@ -161,11 +162,12 @@ task packageLanguages(type: Zip, dependsOn: buildLanguage) {
     archiveBaseName = 'org.iets3.opensource.genjs'
     from artifactsDir
     include 'iets3.opensource.genjs/**'
+    include 'ecmascript4mps/**'
 }
 
 publishing {
     publications {
-        openSource(MavenPublication) {
+        genJs(MavenPublication) {
             groupId 'org.iets3.opensource'
             artifactId 'genjs'
             artifact packageLanguages
