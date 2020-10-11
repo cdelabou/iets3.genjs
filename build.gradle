@@ -29,7 +29,7 @@ configurations {
 
 dependencies {
     mps "com.jetbrains:mps:$mpsVersion"
-	mpsArtifacts "org.iets3:opensource:$mpsVersion.+"
+	mpsArtifacts "org.iets3:opensource:2020.1.4598.8281546"
     junitAnt 'org.apache.ant:ant-junit:1.10.9'
 }
 
@@ -66,7 +66,6 @@ task resolveMps(type: Copy) {
     }
     into mpsDir
 }
-resolveMps.onlyIf { !project.hasProperty("mpsDir") }
 
 // Project
 version = "$mpsVersion.0"
@@ -111,7 +110,10 @@ task cloneEcmascript {
 	}
 }
 
-task buildEcmascript(type: BuildLanguages, dependsOn: [cloneEcmascript, resolveMps]) {
+task buildEcmascript(type: BuildLanguages, dependsOn: [cloneEcmascript]) {
+    if (!project.hasProperty("mpsDir")) {
+        dependsOn "resolveMps"
+    }
 	script "$ecmascriptHome/build.xml"
 }
 
@@ -122,7 +124,10 @@ task resolveArtifacts(type: Copy, dependsOn: [buildEcmascript]) {
     into artifactsDir
 }
 
-task buildLanguages(type: BuildLanguages, dependsOn: [buildEcmascript, resolveMps, resolveArtifacts]) {
+task buildLanguages(type: BuildLanguages, dependsOn: [buildEcmascript, resolveArtifacts]) {
+    if (!project.hasProperty("mpsDir")) {
+        dependsOn "resolveMps"
+    }
 	script "$rootDir/build.xml"
 }
 

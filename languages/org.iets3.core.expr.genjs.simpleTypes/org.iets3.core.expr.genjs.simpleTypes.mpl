@@ -13,11 +13,6 @@
           <sourceRoot location="templates" />
         </modelRoot>
       </models>
-      <facets>
-        <facet type="java">
-          <classes generated="true" path="${module}/generator/classes_gen" />
-        </facet>
-      </facets>
       <external-templates>
         <generator generatorUID="4166eb0f-595e-4b4f-9c9b-ac5141ea2ae7(org.iets3.core.expr.genjs.base#01)" />
       </external-templates>

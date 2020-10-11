@@ -33,3 +33,11 @@ If you need this language to be used outside in another project, you can do the 
 ```
 ./gradlew packageLanguages publishToMavenLocal
 ```
+
+#### Build settings
+In case you need to use a specific version of MPS, or avoid downloading MPS all over again, you can set some settings to make the build fit your need.
+
+|  Property  | Description | Example |
+|------------|-------------|---------|
+| mpsDir     | Directory of your MPS installation, if specified MPS will not be downloaded again. | -PmpsDir="./build/mps" |
+| mpsVersion | Version of MPS used in the project (used to set the version number and determine which version of MPS to download if mpsDir is not set). | -PmpsVersion="2020.2" |
