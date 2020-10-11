@@ -31,5 +31,5 @@ You can then open the project in MPS.
 #### Installation for external use
 If you need this language to be used outside in another project, you can do the same as above and deploy it to your local maven repository after build using the below script.
 ```
-./gradlew packageLanguage publishToMavenLocal
+./gradlew packageLanguages publishToMavenLocal
 ```

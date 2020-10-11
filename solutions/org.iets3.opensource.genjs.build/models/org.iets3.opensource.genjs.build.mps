@@ -144,7 +144,7 @@
     </language>
   </registry>
   <node concept="1l3spW" id="4vyBtkfxwq6">
-    <property role="TrG5h" value="iets3.opensource.genjs" />
+    <property role="TrG5h" value="org.iets3.opensource.genjs" />
     <property role="2DA0ip" value="../.." />
     <node concept="10PD9b" id="4vyBtkfxwq7" role="10PD9s" />
     <node concept="3b7kt6" id="4vyBtkfxwq8" role="10PD9s" />
@@ -222,26 +222,26 @@
     </node>
     <node concept="1l3spV" id="4vyBtkfxwr1" role="1l3spN">
       <node concept="m$_wl" id="6Y0QzIEyAFH" role="39821P">
-        <ref role="m_rDy" node="4vyBtkfxwqO" resolve="iets3.opensource.genjs" />
+        <ref role="m_rDy" node="4vyBtkfxwqO" resolve="org.iets3.opensource.genjs" />
         <node concept="pUk6x" id="6Y0QzIEyAFI" role="pUk7w" />
       </node>
       <node concept="3981dG" id="4vyBtkfxwr2" role="39821P">
         <node concept="3_J27D" id="4vyBtkfxwr3" role="Nbhlr">
           <node concept="3Mxwew" id="4vyBtkfxwr4" role="3MwsjC">
-            <property role="3MwjfP" value="iets3.opensource.genjs.zip" />
+            <property role="3MwjfP" value="org.iets3.opensource.genjs.zip" />
           </node>
         </node>
         <node concept="m$_wl" id="4vyBtkfxwr5" role="39821P">
-          <ref role="m_rDy" node="4vyBtkfxwqO" resolve="iets3.opensource.genjs" />
+          <ref role="m_rDy" node="4vyBtkfxwqO" resolve="org.iets3.opensource.genjs" />
           <node concept="pUk6x" id="4vyBtkfxwr6" role="pUk7w" />
         </node>
       </node>
     </node>
     <node concept="m$_wf" id="4vyBtkfxwqO" role="3989C9">
-      <property role="m$_wk" value="iets3.opensource.genjs" />
+      <property role="m$_wk" value="org.iets3.opensource.genjs" />
       <node concept="3_J27D" id="4vyBtkfxwqP" role="m$_yQ">
         <node concept="3Mxwew" id="4vyBtkfxwqQ" role="3MwsjC">
-          <property role="3MwjfP" value="iets3.opensource.genjs" />
+          <property role="3MwjfP" value="org.iets3.opensource.genjs" />
         </node>
       </node>
       <node concept="3_J27D" id="4vyBtkfxwqR" role="m$_w8">
@@ -263,7 +263,7 @@
       </node>
       <node concept="3_J27D" id="4vyBtkfxwqV" role="m_cZH">
         <node concept="3Mxwew" id="4vyBtkfxwqW" role="3MwsjC">
-          <property role="3MwjfP" value="iets3.opensource.genjs" />
+          <property role="3MwjfP" value="org.iets3.opensource.genjs" />
         </node>
       </node>
       <node concept="2pNNFK" id="4vyBtkfxwqX" role="20twgj">
@@ -273,11 +273,11 @@
         </node>
       </node>
       <node concept="m$f5U" id="4vyBtkfymDO" role="m$_yh">
-        <ref role="m$f5T" node="4vyBtkfxwqN" resolve="iets3.opensource.genjs" />
+        <ref role="m$f5T" node="4vyBtkfxwqN" resolve="org.iets3.opensource.genjs" />
       </node>
     </node>
     <node concept="2G$12M" id="4vyBtkfxwqN" role="3989C9">
-      <property role="TrG5h" value="iets3.opensource.genjs" />
+      <property role="TrG5h" value="org.iets3.opensource.genjs" />
       <node concept="1E1JtD" id="4vyBtkfxwqk" role="2G$12L">
         <property role="TrG5h" value="org.mar9000.mps.ecmascript.extended" />
         <property role="3LESm3" value="7c445dfe-2a01-4a0e-84bd-4d6b91c112c9" />
