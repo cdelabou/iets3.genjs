@@ -3,6 +3,8 @@
   <exported-language name="acbc5fbb-8801-4f62-a053-ab017db885db(org.iets3.core.expr.genjs.base)" />
   <exported-language name="f2122111-2e69-4f81-8e65-120416de80e8(org.iets3.core.expr.genjs.simpleTypes)" />
   <exported-language name="f0534572-e0f4-46cd-8abb-ed67e4c4a375(org.iets3.core.expr.genjs.toplevel)" />
+  <exported-language name="7c445dfe-2a01-4a0e-84bd-4d6b91c112c9(org.mar9000.mps.ecmascript.extended)" />
+  <exported-language name="a4829704-6b1b-4b3f-8122-a4a2e6ac90ff(org.mar9000.mps.ecmascript)" />
   <exported-solutions>
     <exported-solution>cb743fb5-230f-4298-84e4-59b7101f05e8(org.iets3.core.expr.genjs.core.genplan)</exported-solution>
   </exported-solutions>

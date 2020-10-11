@@ -11,18 +11,26 @@ buildscript {
 // Git
 plugins {
     id 'base'
+    id 'maven-publish'
 	id 'org.ajoberstar.grgit' version '4.1.0' apply false
 }
 
+// Versions
+ext.mpsVersion = project.hasProperty("mpsVersion") ? project.property('mpsVersion') : '2020.2'
+
+// Optional properties
+def mpsDir = project.hasProperty("mpsDir") ? project.property('mpsDir') : "$buildDir/mps"
+def iets3OpenSourceVersion = project.hasProperty("iets3OpenSourceVersion") ? project.property('iets3OpenSourceVersion') : "$mpsVersion-SNAPSHOT"
+
 configurations {
     mps
+	mpsArtifacts
     junitAnt
 }
 
-ext.mpsVersion = '2020.2'
-
 dependencies {
     mps "com.jetbrains:mps:$mpsVersion"
+	mpsArtifacts "org.iets3:opensource:$iets3OpenSourceVersion"
     junitAnt 'org.apache.ant:ant-junit:1.10.9'
 }
 
@@ -41,9 +49,12 @@ import de.itemis.mps.gradle.*
 
 def jdkHome = System.getProperty('java.home')
 
-// Location of the dependencies
-def iets3home = "$rootDir/dependencies/iets3.opensource"
-def ecmascriptHome = "$rootDir/dependencies/ecmascript4mps"
+// Location of the dependencies (if cloned)
+def iets3home = "$buildDir/dependencies/iets3.opensource"
+def ecmascriptHome = "$buildDir/dependencies/ecmascript4mps"
+
+ext.artifactsDir = file("$rootDir/artifacts")
+
 
 // Default arguments for ant scripts
 def buildScriptClasspath = project.configurations.junitAnt.fileCollection { true } +
@@ -55,17 +66,36 @@ task resolveMps(type: Copy) {
     from {
         configurations.mps.resolve().collect { zipTree(it) }
     }
-    into "$buildDir/mps"
+    into mpsDir
+}
+resolveMps.onlyIf { !project.hasProperty("mpsDir") }
+
+task resolveArtifacts(type: Copy) {
+    from {
+        configurations.mpsArtifacts.resolve().collect { zipTree(it) }
+    }
+    into artifactsDir
 }
 
-def version = "1.0"
 
+version = "1.0"
+
+// Args to the builds scripts, contains both home and artifacts directory 
 def defaultScriptArgs = [
-	'mps_home'                          : resolveMps.destinationDir,
-	'iets3.github.opensource.home'      : iets3home,
-	'ecmascript4mps.home'				: ecmascriptHome,
+	'mps_home'                          : mpsDir,
+
+    // Projects folders
+    'ecmascript4mps.home'               : ecmascriptHome,
+    'iets3.github.opensource.home'      : iets3home,
 	'iets3.github.opensource.genjs.home': rootDir,
-	'build.dir'                         : buildDir,
+
+    // Generated artifacts
+	'iets3.github.opensource.artifacts' : "$artifactsDir/org.iets3.opensource",
+    'mbeddr.artifacts.platform'         : "$artifactsDir/com.mbeddr.platform",
+	'ecmascript4mps.artifacts'  		: "$artifactsDir/ecmascript4mps",
+
+    // Misc
+	'build.dir'                         : rootDir,
 	'version'                           : version
 ]
 
@@ -90,7 +120,8 @@ task cloneOpenSource {
 task buildOpenSource(type: GradleBuild, dependsOn: [cloneOpenSource, resolveMps]) {
 	description "build kernelF from source"
 	dir = file(iets3home)
-    tasks = ['buildLanguages']
+	startParameter.projectProperties = [iets3OpenSourceVersion: iets3OpenSourceVersion]
+    tasks = ['packageLanguages', 'publishToMavenLocal']
 }
 
 task cloneEcmascript {
@@ -114,15 +145,50 @@ task buildEcmascript(type: BuildLanguages, dependsOn: [cloneEcmascript, resolveM
 	script "$ecmascriptHome/build.xml"
 }
 
-task buildLanguage(type: BuildLanguages, dependsOn: [buildEcmascript, buildOpenSource, resolveMps]) {
+task buildLanguage(type: BuildLanguages, dependsOn: [buildEcmascript, resolveMps, resolveArtifacts]) {
 	script "$rootDir/build.xml"
 }
 
 task generateLibrariesXml(type: GenerateLibrariesXml) {
-    description "Will read project libraries from projectlibraries.properties and generate libraries.xml in .mps directory. Libraries are loaded in mps during start."
+    description "Read project libraries from projectlibraries.properties and generate libraries.xml in .mps directory. Libraries are loaded in mps during start."
     defaults rootProject.file('projectlibraries.properties')
 	overrides rootProject.file('projectlibraries.overrides.properties')
     destination file('.mps/libraries.xml')
+}
+
+task packageLanguages(type: Zip, dependsOn: buildLanguage) {
+    description ""
+    archiveBaseName = 'org.iets3.opensource.genjs'
+    from artifactsDir
+    include 'iets3.opensource.genjs/**'
+}
+
+publishing {
+    publications {
+        openSource(MavenPublication) {
+            groupId 'org.iets3.opensource'
+            artifactId 'genjs'
+            artifact packageLanguages
+            pom.withXml {
+                def dependenciesNode = asNode().appendNode('dependencies')
+                configurations.mpsArtifacts.resolvedConfiguration.firstLevelModuleDependencies.each{
+                    def dependencyNode = dependenciesNode.appendNode('dependency')
+                    dependencyNode.appendNode('groupId', it.moduleGroup)
+                    dependencyNode.appendNode('artifactId', it.moduleName)
+                    dependencyNode.appendNode('version', it.moduleVersion)
+                    dependencyNode.appendNode('type', it.moduleArtifacts[0].type)
+                }
+                configurations.mps.resolvedConfiguration.firstLevelModuleDependencies.each{
+                    def dependencyNode = dependenciesNode.appendNode('dependency')
+                    dependencyNode.appendNode('groupId', it.moduleGroup)
+                    dependencyNode.appendNode('artifactId', it.moduleName)
+                    dependencyNode.appendNode('version', it.moduleVersion)
+                    dependencyNode.appendNode('type', it.moduleArtifacts[0].type)
+                    dependencyNode.appendNode('scope', 'provided')
+                }
+            }
+        }
+    }
 }
 
 defaultTasks 'buildLanguage'
