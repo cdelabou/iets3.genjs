@@ -90,6 +90,7 @@
         <child id="6592112598314499028" name="dependencies" index="m$_yJ" />
         <child id="6592112598314499021" name="name" index="m$_yQ" />
         <child id="6592112598314855574" name="containerName" index="m_cZH" />
+        <child id="1238980147629899306" name="pluginXml" index="I30fb" />
       </concept>
       <concept id="6592112598314498926" name="jetbrains.mps.build.mps.structure.BuildMpsLayout_Plugin" flags="ng" index="m$_wl">
         <reference id="6592112598314801433" name="plugin" index="m_rDy" />
@@ -274,6 +275,11 @@
       </node>
       <node concept="m$f5U" id="4vyBtkfymDO" role="m$_yh">
         <ref role="m$f5T" node="4vyBtkfxwqN" resolve="org.iets3.opensource.genjs" />
+      </node>
+      <node concept="55IIr" id="2crGtFy7fjK" role="I30fb">
+        <node concept="2Ry0Ak" id="2crGtFy7fjP" role="iGT6I">
+          <property role="2Ry0Am" value="plugin.xml" />
+        </node>
       </node>
     </node>
     <node concept="2G$12M" id="4vyBtkfxwqN" role="3989C9">

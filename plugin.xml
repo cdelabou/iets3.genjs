@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<idea-plugin>
+  <id>org.iets3.opensource.genjs</id>
+  <name>org.iets3.opensource.genjs</name>
+  <version>1.0</version>
+  <depends>jetbrains.mps.core</depends>
+  <depends>org.iets3.core.os</depends>
+  <depends>org.iets3.build.os</depends>
+  <depends>org.mar9000.mps.ecmascript</depends>
+  <depends>com.intellij.modules.platform</depends>
+  <extensions defaultExtensionNs="com.intellij">
+    <mps.LanguageLibrary dir="/languages" />
+  </extensions>
+</idea-plugin>

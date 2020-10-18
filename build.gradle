@@ -46,7 +46,7 @@ import org.ajoberstar.grgit.Grgit
 // Make BuildLanguages and GenerateLibrariesXml available
 import de.itemis.mps.gradle.*
 
-def jdkHome = System.getProperty('java.home')
+def jdkHome = project.hasProperty("jdk") ? project.property('jdk') : System.getProperty('java.home')
 
 // Location of the dependencies
 def ecmascriptHome = "$buildDir/dependencies/ecmascript4mps"

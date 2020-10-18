@@ -50,22 +50,9 @@
   <target name="assemble" depends="classes, declare-mps-tasks">
     <mkdir dir="${build.layout}/org.iets3.opensource.genjs" />
     <mkdir dir="${build.layout}/org.iets3.opensource.genjs/META-INF" />
-    <echoxml file="${build.layout}/org.iets3.opensource.genjs/META-INF/plugin.xml">
-      <idea-plugin xmlns:xi="http://www.w3.org/2001/XInclude">
-        <id>org.iets3.opensource.genjs</id>
-        <name>org.iets3.opensource.genjs</name>
-        <version>1.0</version>
-        <depends>jetbrains.mps.core</depends>
-        <depends>org.iets3.core.os</depends>
-        <depends>org.iets3.build.os</depends>
-        <depends>ecmascript4mps</depends>
-        <depends>com.intellij.modules.platform</depends>
-        
-        <extensions defaultExtensionNs="com.intellij">
-          <mps.LanguageLibrary dir="/languages" />
-        </extensions>
-      </idea-plugin>
-    </echoxml>
+    <copy todir="${build.layout}/org.iets3.opensource.genjs/META-INF">
+      <fileset file="${basedir}/plugin.xml" />
+    </copy>
     <mkdir dir="${build.layout}/org.iets3.opensource.genjs/languages" />
     <mkdir dir="${build.layout}/org.iets3.opensource.genjs/languages/org.iets3.opensource.genjs" />
     <mkdir dir="${build.tmp}/default/org.mar9000.mps.ecmascript.extended.jar" />
@@ -716,23 +703,6 @@
     </jar>
     <mkdir dir="${build.tmp}/default/org.iets3.opensource.genjs.zip" />
     <mkdir dir="${build.tmp}/default/org.iets3.opensource.genjs.zip/org.iets3.opensource.genjs" />
-    <mkdir dir="${build.tmp}/default/org.iets3.opensource.genjs.zip/org.iets3.opensource.genjs/META-INF" />
-    <echoxml file="${build.tmp}/default/org.iets3.opensource.genjs.zip/org.iets3.opensource.genjs/META-INF/plugin.xml">
-      <idea-plugin xmlns:xi="http://www.w3.org/2001/XInclude">
-        <id>org.iets3.opensource.genjs</id>
-        <name>org.iets3.opensource.genjs</name>
-        <version>1.0</version>
-        <depends>jetbrains.mps.core</depends>
-        <depends>org.iets3.core.os</depends>
-        <depends>org.iets3.build.os</depends>
-        <depends>ecmascript4mps</depends>
-        <depends>com.intellij.modules.platform</depends>
-        
-        <extensions defaultExtensionNs="com.intellij">
-          <mps.LanguageLibrary dir="/languages" />
-        </extensions>
-      </idea-plugin>
-    </echoxml>
     <mkdir dir="${build.tmp}/default/org.iets3.opensource.genjs.zip/org.iets3.opensource.genjs/languages" />
     <mkdir dir="${build.tmp}/default/org.iets3.opensource.genjs.zip/org.iets3.opensource.genjs/languages/org.iets3.opensource.genjs" />
     <mkdir dir="${build.tmp}/default/org.mar9000.mps.ecmascript.extended.jar1" />
@@ -1382,6 +1352,7 @@
       <zipfileset dir="${build.tmp}/customProcessors/copyModels/solutions-org.iets3.opensource.genjs.build-models1" prefix="module/models" />
     </jar>
     <zip destfile="${build.layout}/org.iets3.opensource.genjs.zip">
+      <zipfileset file="${basedir}/plugin.xml" prefix="org.iets3.opensource.genjs/META-INF" />
       <fileset dir="${build.tmp}/default/org.iets3.opensource.genjs.zip" />
     </zip>
     <echo file="${build.layout}/build.properties">mps.build.number=${mps.build.number}${line.separator}mps.date=${mps.date}${line.separator}mps.build.vcs.number=${mps.build.vcs.number}${line.separator}mps.teamcity.buildConfName=${mps.teamcity.buildConfName}${line.separator}mps.idea.platform.build.number=${mps.idea.platform.build.number}${line.separator}mps.mps.build.counter=${mps.mps.build.counter}${line.separator}mpsBootstrapCore.version.major=${mpsBootstrapCore.version.major}${line.separator}mpsBootstrapCore.version.minor=${mpsBootstrapCore.version.minor}${line.separator}mpsBootstrapCore.version.bugfixNr=${mpsBootstrapCore.version.bugfixNr}${line.separator}mpsBootstrapCore.version.eap=${mpsBootstrapCore.version.eap}${line.separator}mpsBootstrapCore.version=${mpsBootstrapCore.version}${line.separator}com.mbeddr.platform.major.version=${com.mbeddr.platform.major.version}${line.separator}com.mbeddr.platform.minor.version=${com.mbeddr.platform.minor.version}${line.separator}com.mbeddr.platform.build=${com.mbeddr.platform.build}${line.separator}com.mbeddr.platform.mbeddr.version=${com.mbeddr.platform.mbeddr.version}${line.separator}de.itemis.mps.extensions.versionNumber=${de.itemis.mps.extensions.versionNumber}${line.separator}org.iets3.opensource.minor=${org.iets3.opensource.minor}${line.separator}org.iets3.opensource.major=${org.iets3.opensource.major}${line.separator}org.iets3.opensource.build=${org.iets3.opensource.build}${line.separator}org.iets3.opensource.version=${org.iets3.opensource.version}</echo>

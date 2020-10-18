@@ -41,3 +41,4 @@ In case you need to use a specific version of MPS, or avoid downloading MPS all 
 |------------|-------------|---------|
 | mpsDir     | Directory of your MPS installation, if specified MPS will not be downloaded again. | -PmpsDir="./build/mps" |
 | mpsVersion | Version of MPS used in the project (used to set the version number and determine which version of MPS to download if mpsDir is not set). | -PmpsVersion="2020.2" |
+| jdk | Path the the Java 11 jdk. | -Pjdk="/soft/mps/jbr" |
