@@ -97,7 +97,7 @@ task cloneEcmascript {
 	doLast {
 		try {
 			Grgit.open(dir: ecmascriptHome)
-			println "iets3.opensource exists, assuming clone to be done"
+			println "ecmascript4mps folder exists, assuming clone to be done"
 		} catch(Exception e) {
 			def grgit = Grgit.clone(
 				dir: ecmascriptHome,
