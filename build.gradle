@@ -58,11 +58,13 @@ ext.artifactsDir = file("$rootDir/artifacts")
 def buildScriptClasspath = project.configurations.junitAnt.fileCollection { true } +
 	project.files("$jdkHome/lib/tools.jar")
 
-// Download MPS (TODO provide a way to specify external MPS)
+// Download MPS
 task resolveMps(type: Copy) {
     dependsOn configurations.mps
     from {
-        configurations.mps.resolve().collect { zipTree(it) }
+        if (!project.hasProperty("mpsDir")) {
+            configurations.mps.resolve().collect { zipTree(it) }
+        }
     }
     into mpsDir
 }
