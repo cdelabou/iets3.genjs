@@ -5,6 +5,11 @@
       <sourceRoot location="models" />
     </modelRoot>
   </models>
+  <facets>
+    <facet type="java">
+      <classes generated="true" path="${module}/classes_gen" />
+    </facet>
+  </facets>
   <accessoryModels />
   <generators>
     <generator alias="main" namespace="org.iets3.core.expr.genjs.toplevel#01" uuid="f9a4f4e4-c8bd-485f-8384-1f3c0b46d43a">

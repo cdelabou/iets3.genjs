@@ -5,6 +5,11 @@
       <sourceRoot location="models" />
     </modelRoot>
   </models>
+  <facets>
+    <facet type="java">
+      <classes generated="true" path="${module}/classes_gen" />
+    </facet>
+  </facets>
   <accessoryModels />
   <generators>
     <generator alias="main" namespace="org.mar9000.mps.ecmascript.extended#01" uuid="e7e9a11a-1d49-4895-abe6-8a13397e030f">
