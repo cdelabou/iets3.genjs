@@ -12,13 +12,11 @@ buildscript {
 plugins {
     id 'base'
     id 'maven-publish'
+    id "de.undercouch.download" version "4.1.1"
 }
 
 // Versions
 ext.mpsVersion = project.hasProperty("mpsVersion") ? project.property('mpsVersion') : '2020.2'
-
-// Optional properties
-def mpsDir = project.hasProperty("mpsDir") ? project.property('mpsDir') : "$buildDir/mps"
 
 configurations {
     mps
@@ -46,10 +44,74 @@ repositories {
 // Make BuildLanguages and GenerateLibrariesXml available
 import de.itemis.mps.gradle.*
 
-def jdkHome = project.hasProperty("jdk") ? project.property('jdk') : System.getProperty('java.home')
+// Tools to determine architecture
+import org.apache.tools.ant.taskdefs.condition.Os
 
 // Location of the dependencies
 ext.artifactsDir = file("$rootDir/artifacts")
+
+// Optional properties
+def mpsDir = project.hasProperty("mpsDir") ? project.property('mpsDir') : "$buildDir/mps"
+
+// ==== resolving java 11 ====
+def jdkHome
+def downloadJdk = false
+
+
+// Sdk specified
+if (project.hasProperty("jdk")) {
+    // No further check
+    jdkHome = project.property('jdk')
+}
+
+// Current java version is 11
+else if (JavaVersion.current() == JavaVersion.VERSION_11) {
+    // Perfect then -> use it
+    jdkHome = System.getProperty('java.home')
+}
+
+// Neither specified, but MPS installation provided with a jbr folder !
+else if (project.hasProperty("mpsDir") && file("$mpsDir/jbr").exists()) {
+    // That was close
+    jdkHome = "$mpsDir/jbr"
+}
+
+else {
+    // No option left but to download it :c
+    // We set a flag so we wait for a task to actually need it
+    downloadJdk = true
+	jdkHome = "$buildDir/jbrsdk"
+}
+
+task resolveJdk(type: Download) {
+	doFirst {
+	    println "Java 11, which is required to build dependencies, was not found."
+	    println "We will download one for you."
+		mkdir file(jdkHome)
+	}
+	
+	def arch = System.properties['sun.arch.data.model'].equals("64") ? "x64" : "x86"
+	def os
+	if (Os.isFamily(Os.FAMILY_WINDOWS)) {
+        os = "windows"
+    } else if (Os.isFamily(Os.FAMILY_LINUX)) {
+    	os = "linux"
+    } else {
+    	os = "osx"
+    }
+
+    def filename = "jbrsdk-11_0_8-$os-$arch-b1145.3.tar.gz"
+
+    src "https://dl.bintray.com/jetbrains/intellij-jbr/$filename"
+	dest "$buildDir/$filename"
+	overwrite false
+
+}
+
+task unpackJdk(type: Copy, dependsOn: resolveJdk) {
+    from tarTree(resources.gzip(resolveJdk.dest))
+    into "$buildDir"
+}
 
 
 // Default arguments for ant scripts
@@ -100,9 +162,9 @@ task resolveArtifacts(type: Copy) {
 }
 
 task buildLanguages(type: BuildLanguages, dependsOn: [resolveArtifacts]) {
-    if (!project.hasProperty("mpsDir")) {
-        dependsOn "resolveMps"
-    }
+    if (!project.hasProperty("mpsDir")) dependsOn "resolveMps"
+    if (downloadJdk) dependsOn "unpackJdk"
+
 	script "$rootDir/build.xml"
 }
 

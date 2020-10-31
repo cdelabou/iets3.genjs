@@ -4,8 +4,14 @@ Javascript generator for [iets3.opensource](https://github.com/IETS3/iets3.opens
 ## Install
 
 ### Requirements
-In order to install the project and its dependencies, you will need
-- **Java 11**
+There is no specific software requirements to use this project (MPS aside).
+
+However, having the following software may make things smoother as for the build script:
+- **Java 11** : used for compilation within gradle scripts (it needs *JAVA_HOME* environement variable to be set)
+- **Git** : cloning this repository (if you no not downloading it as a zip)
+- **MPS** : used for building the language on the command line
+
+**Note:** Java 11 is required because MPS use it, using another version generated artifacts do not work. A Java 11 distribution is sometimes packaged with MPS, so only specifying `mpsDir` can avoid extra download. 
 
 ### Installation script
 Start by cloning the repository on your computer.
