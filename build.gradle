@@ -30,6 +30,7 @@ configurations {
 dependencies {
     mps "com.jetbrains:mps:$mpsVersion"
 	mpsArtifacts "org.iets3:opensource:2020.1.4598.8281546"
+	mpsArtifacts "org.mar9000:ecmascript4mps:2020.2.1"
     junitAnt 'org.apache.ant:ant-junit:1.10.9'
 }
 
@@ -39,6 +40,7 @@ repositories {
 		url 'https://projects.itemis.de/nexus/content/repositories/mbeddr'
 	}
     mavenCentral()
+    maven { url 'https://jitpack.io' }
 }
 
 import org.ajoberstar.grgit.Grgit
@@ -95,6 +97,7 @@ ext["itemis.mps.gradle.ant.defaultScriptArgs"] = defaultScriptArgs.collect { "-D
 ext["itemis.mps.gradle.ant.defaultScriptClasspath"] = buildScriptClasspath
 ext["itemis.mps.gradle.ant.defaultJavaExecutable"] = file("$jdkHome/bin/java")
 
+/* Delete?
 task cloneEcmascript {
 	doLast {
 		try {
@@ -118,15 +121,16 @@ task buildEcmascript(type: BuildLanguages, dependsOn: [cloneEcmascript]) {
     }
 	script "$ecmascriptHome/build.xml"
 }
+*/
 
-task resolveArtifacts(type: Copy, dependsOn: [buildEcmascript]) {
+task resolveArtifacts(type: Copy) {
     from {
         configurations.mpsArtifacts.resolve().collect { zipTree(it) }
     }
     into artifactsDir
 }
 
-task buildLanguages(type: BuildLanguages, dependsOn: [buildEcmascript, resolveArtifacts]) {
+task buildLanguages(type: BuildLanguages, dependsOn: [resolveArtifacts]) {
     if (!project.hasProperty("mpsDir")) {
         dependsOn "resolveMps"
     }
