@@ -12,7 +12,6 @@ buildscript {
 plugins {
     id 'base'
     id 'maven-publish'
-	id 'org.ajoberstar.grgit' version '4.1.0' apply false
 }
 
 // Versions
@@ -43,7 +42,6 @@ repositories {
     maven { url 'https://jitpack.io' }
 }
 
-import org.ajoberstar.grgit.Grgit
 
 // Make BuildLanguages and GenerateLibrariesXml available
 import de.itemis.mps.gradle.*
@@ -51,8 +49,6 @@ import de.itemis.mps.gradle.*
 def jdkHome = project.hasProperty("jdk") ? project.property('jdk') : System.getProperty('java.home')
 
 // Location of the dependencies
-def ecmascriptHome = "$buildDir/dependencies/ecmascript4mps"
-
 ext.artifactsDir = file("$rootDir/artifacts")
 
 
@@ -79,7 +75,6 @@ def defaultScriptArgs = [
 	'mps_home'                          : mpsDir,
 
     // Projects folders
-    'ecmascript4mps.home'               : ecmascriptHome,
 	'iets3.github.opensource.genjs.home': rootDir,
 
     // Generated artifacts
@@ -96,32 +91,6 @@ def defaultScriptArgs = [
 ext["itemis.mps.gradle.ant.defaultScriptArgs"] = defaultScriptArgs.collect { "-D$it.key=$it.value".toString() }
 ext["itemis.mps.gradle.ant.defaultScriptClasspath"] = buildScriptClasspath
 ext["itemis.mps.gradle.ant.defaultJavaExecutable"] = file("$jdkHome/bin/java")
-
-/* Delete?
-task cloneEcmascript {
-	doLast {
-		try {
-			Grgit.open(dir: ecmascriptHome)
-			println "ecmascript4mps folder exists, assuming clone to be done"
-		} catch(Exception e) {
-			def grgit = Grgit.clone(
-				dir: ecmascriptHome,
-				uri: "https://github.com/mar9000/ecmascript4mps.git",
-				refToCheckout: "development",
-				checkout: true,
-			)
-			println grgit.describe()
-		}
-	}
-}
-
-task buildEcmascript(type: BuildLanguages, dependsOn: [cloneEcmascript]) {
-    if (!project.hasProperty("mpsDir")) {
-        dependsOn "resolveMps"
-    }
-	script "$ecmascriptHome/build.xml"
-}
-*/
 
 task resolveArtifacts(type: Copy) {
     from {
@@ -145,11 +114,10 @@ task generateLibrariesXml(type: GenerateLibrariesXml) {
 }
 
 task packageLanguages(type: Zip, dependsOn: buildLanguages) {
-    description "Package genjs + dev version of ecmascript4mps into the same zip file"
+    description "Package genjs into the zip file"
     archiveBaseName = 'org.iets3.opensource.genjs'
     from artifactsDir
     include 'org.iets3.opensource.genjs/**'
-    include 'ecmascript4mps/**'
 }
 
 publishing {
