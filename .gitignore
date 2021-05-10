@@ -17,3 +17,6 @@ tmp
 
 # External libraries (optional)
 .mps/libraries.xml
+
+# Other
+.DS_Store
