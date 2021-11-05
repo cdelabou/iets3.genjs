@@ -8,7 +8,6 @@ buildscript {
     }
 }
 
-// Git
 plugins {
     id 'base'
     id 'maven-publish'
@@ -45,8 +44,6 @@ repositories {
 // Make BuildLanguages and GenerateLibrariesXml available
 import de.itemis.mps.gradle.*
 
-// Tools to determine architecture
-import org.apache.tools.ant.taskdefs.condition.Os
 
 // Location of the dependencies
 ext.artifactsDir = file("$rootDir/artifacts")
