@@ -5,7 +5,7 @@
     <use id="7a5dda62-9140-4668-ab76-d5ed1746f2b2" name="jetbrains.mps.lang.typesystem" version="5" />
     <use id="a4829704-6b1b-4b3f-8122-a4a2e6ac90ff" name="org.mar9000.mps.ecmascript" version="14" />
     <use id="d7706f63-9be2-479c-a3da-ae92af1e64d5" name="jetbrains.mps.lang.generator.generationContext" version="2" />
-    <use id="b401a680-8325-4110-8fd3-84331ff25bef" name="jetbrains.mps.lang.generator" version="3" />
+    <use id="b401a680-8325-4110-8fd3-84331ff25bef" name="jetbrains.mps.lang.generator" version="4" />
     <use id="7c445dfe-2a01-4a0e-84bd-4d6b91c112c9" name="org.mar9000.mps.ecmascript.extended" version="0" />
     <devkit ref="a2eb3a43-fcc2-4200-80dc-c60110c4862d(jetbrains.mps.devkit.templates)" />
   </languages>
@@ -151,6 +151,9 @@
       <concept id="1722980698497626400" name="jetbrains.mps.lang.generator.structure.ITemplateCall" flags="ng" index="v9R3L">
         <reference id="1722980698497626483" name="template" index="v9R2y" />
         <child id="1722980698497626405" name="actualArgument" index="v9R3O" />
+      </concept>
+      <concept id="2880994019885263148" name="jetbrains.mps.lang.generator.structure.LoopMacroNamespaceAccessor" flags="ng" index="$GB7w">
+        <property id="1501378878163388321" name="variable" index="26SvY3" />
       </concept>
       <concept id="5133195082121471908" name="jetbrains.mps.lang.generator.structure.LabelMacro" flags="ln" index="2ZBi8u" />
       <concept id="1167168920554" name="jetbrains.mps.lang.generator.structure.BaseMappingRule_Condition" flags="in" index="30G5F_" />
@@ -390,9 +393,6 @@
       <concept id="1216860049635" name="jetbrains.mps.lang.generator.generationContext.structure.TemplateFunctionParameter_generationContext" flags="nn" index="1iwH7S" />
       <concept id="1048903277984174662" name="jetbrains.mps.lang.generator.generationContext.structure.GenerationContextOp_VarRef2" flags="nn" index="1psM6Z">
         <reference id="1048903277984174663" name="vardecl" index="1psM6Y" />
-      </concept>
-      <concept id="7430509679014182526" name="jetbrains.mps.lang.generator.generationContext.structure.GenerationContextOp_ContextVarRef" flags="ng" index="1qCSth">
-        <property id="7430509679014182818" name="contextVarName" index="1qCSqd" />
       </concept>
       <concept id="3228980938641126117" name="jetbrains.mps.lang.generator.generationContext.structure.GenerationContextOp_UniqueValidId" flags="ng" index="1AYpvF">
         <child id="2537089342344730415" name="node" index="2QPDDZ" />
@@ -9428,11 +9428,8 @@
                                         <node concept="Xl_RD" id="emEhcRNYSk" role="3uHU7w">
                                           <property role="Xl_RC" value="" />
                                         </node>
-                                        <node concept="2OqwBi" id="emEhcRNYSl" role="3uHU7B">
-                                          <node concept="1iwH7S" id="emEhcRNYSm" role="2Oq$k0" />
-                                          <node concept="1qCSth" id="emEhcRNYSn" role="2OqNvi">
-                                            <property role="1qCSqd" value="i" />
-                                          </node>
+                                        <node concept="$GB7w" id="6fOSQ2_pPKH" role="3uHU7B">
+                                          <property role="26SvY3" value="1jlY2aid0uu/index" />
                                         </node>
                                       </node>
                                     </node>
@@ -9446,7 +9443,7 @@
                           </node>
                         </node>
                         <node concept="1WS0z7" id="emEhcRNYSp" role="lGtFl">
-                          <property role="1qytDF" value="i" />
+                          <property role="1qytDF" value="" />
                           <node concept="3JmXsc" id="emEhcRNYSq" role="3Jn$fo">
                             <node concept="3clFbS" id="emEhcRNYSr" role="2VODD2">
                               <node concept="3clFbF" id="emEhcRNYSs" role="3cqZAp">
