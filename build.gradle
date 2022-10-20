@@ -16,7 +16,7 @@ plugins {
 // Versions (to update: mpsVersion with the target MPS version and ecmascript4mpsVersion with the commit number or tag available on https://jitpack.io/#mar9000/ecmascript4mps)
 ext.mpsVersion = project.hasProperty("mpsVersion") ? project.property('mpsVersion') : '2021.2.4'
 ext.iets3Version = project.hasProperty("iets3Version") ? project.property('iets3Version') : "2021.2.+"
-ext.ecmascript4mpsVersion = project.hasProperty("ecmascript4mpsVersion") ? project.property('ecmascript4mpsVersion') : "2021.2"
+ext.ecmascript4mpsVersion = project.hasProperty("ecmascript4mpsVersion") ? project.property('ecmascript4mpsVersion') : "611182ebbb"
 
 configurations {
     mps
