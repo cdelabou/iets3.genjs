@@ -94,7 +94,7 @@ task resolveMps(type: Copy) {
 }
 
 // Project
-version = "$mpsVersion.0"
+version = "2021.2"
 
 // Args to the builds scripts, contains both home and artifacts directory
 def defaultScriptArgs = [
@@ -148,8 +148,8 @@ task packageLanguages(type: Zip, dependsOn: buildLanguages) {
 publishing {
     publications {
         genJsWithEcmascript(MavenPublication) {
-            groupId 'org.iets3.opensource'
-            artifactId 'genjs'
+            groupId 'com.github.cdelabou'
+            artifactId 'iets3.genjs'
             artifact packageLanguages
             pom.withXml {
                 def dependenciesNode = asNode().appendNode('dependencies')
